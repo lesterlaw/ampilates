@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
+import Link from "next/link";
 
 export default function Classes() {
   const trialClasses = [
@@ -162,13 +163,21 @@ export default function Classes() {
                   key={index}
                   className="bg-[#80978b] rounded-2xl md:rounded-3xl p-6 md:p-8 text-white"
                 >
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">{pass.title}</h3>
-                  <p className="text-base md:text-lg mb-4 opacity-90">{pass.validity}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                    {pass.title}
+                  </h3>
+                  <p className="text-base md:text-lg mb-4 opacity-90">
+                    {pass.validity}
+                  </p>
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
-                    <p className="text-xl md:text-2xl font-bold">{pass.price}</p>
-                    <button className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm">
-                      Purchase Now
-                    </button>
+                    <p className="text-xl md:text-2xl font-bold">
+                      {pass.price}
+                    </p>
+                    <Link href="/trial">
+                      <button className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm">
+                        Purchase Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -181,7 +190,9 @@ export default function Classes() {
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-[#80978b] mb-2">
                 Class Passes
               </h2>
-              <p className="text-[#80978b] text-base md:text-lg">For all members.</p>
+              <p className="text-[#80978b] text-base md:text-lg">
+                For all members.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -190,13 +201,21 @@ export default function Classes() {
                   key={index}
                   className="bg-[#80978b] rounded-2xl md:rounded-3xl p-6 md:p-8 text-white"
                 >
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">{pass.title}</h3>
-                  <p className="text-base md:text-lg mb-4 opacity-90">{pass.validity}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                    {pass.title}
+                  </h3>
+                  <p className="text-base md:text-lg mb-4 opacity-90">
+                    {pass.validity}
+                  </p>
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
-                    <p className="text-xl md:text-2xl font-bold">{pass.price}</p>
-                    <button className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm">
-                      Purchase Now
-                    </button>
+                    <p className="text-xl md:text-2xl font-bold">
+                      {pass.price}
+                    </p>
+                    <Link href="/trial">
+                      <button className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm">
+                        Purchase Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -226,9 +245,11 @@ export default function Classes() {
                   Experience a trial with us
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
-                Get Free Trial
-              </button>
+              <Link href="/trial">
+                <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
+                  Get Free Trial
+                </button>
+              </Link>
             </div>
           </div>
         </div>

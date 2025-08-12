@@ -9,8 +9,6 @@ export default function Home() {
         <div className="text-center mb-8 md:mb-12">
           <h1 className="font-serif text-4xl md:text-6xl lg:text-8xl font-semibold text-[#232323] leading-tight mb-6 md:mb-8">
             Elevate your mind.
-            <br />
-            Transform your body.
           </h1>
         </div>
 

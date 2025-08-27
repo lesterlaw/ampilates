@@ -121,17 +121,8 @@ export default function Home() {
                 <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
                   First-Time Trial at $19!​
                 </h2>
-                <p className="text-lg md:text-xl mb-6 md:mb-8">
-                  Discover the strength, balance, and
-                  <br />
-                  grace of Reformer Pilates in a welcoming
-                  <br />
-                  and empowering space.​
-                  <br />
-                  <br />
-                  Join us at am Pilates and experience the
-                  <br />
-                  difference.​
+                <p className="text-[17px] md:text-[19px] mb-6 md:mb-8">
+                  Discover the strength, balance, and grace of Reformer Pilates in a welcoming and empowering space. Join us at am Pilates and experience the difference.​
                 </p>
               </div>
               <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">

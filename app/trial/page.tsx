@@ -177,6 +177,14 @@ const TrialClassPage = () => {
             </div>
 
             <div>
+              <label className="block text-secondary text-lg mb-2">Location</label>
+              <select className="w-full px-6 py-4 rounded-full border border-gray-300 bg-white text-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none">
+                <option>Jurong CPF</option>
+                <option>Punggol Coast Mall</option>
+              </select>
+            </div>
+
+            <div>
               <textarea
                 placeholder="Your message"
                 rows={6}

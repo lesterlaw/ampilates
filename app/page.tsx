@@ -329,6 +329,13 @@ export default function Home() {
               placeholder="Subject"
               className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]"
             />
+            <div>
+              <label className="block text-[#656565] mb-2">Location</label>
+              <select className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]">
+                <option>Jurong CPF</option>
+                <option>Punggol Coast Mall</option>
+              </select>
+            </div>
             <textarea
               placeholder="Your message"
               rows={6}

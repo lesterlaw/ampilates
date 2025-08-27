@@ -73,6 +73,13 @@ export default function Contact() {
               placeholder="Subject"
               className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]"
             />
+            <div>
+              <label className="block text-[#656565] text-sm md:text-base mb-2">Location</label>
+              <select className="w-full p-3 md:p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base">
+                <option>Jurong CPF</option>
+                <option>Punggol Coast Mall</option>
+              </select>
+            </div>
             <textarea
               placeholder="Your message"
               rows={6}

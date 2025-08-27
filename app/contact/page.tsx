@@ -18,18 +18,23 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-center space-x-3 md:space-x-4">
-                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">hello@ampilates.sg</span>
-              </div>
-              
-              <div className="flex items-center space-x-3 md:space-x-4">
                 <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
                 <span className="text-base md:text-lg lg:text-xl text-[#232323]">Jurong CPF: (65) 9693-4753</span>
               </div>
-              
+
+              <div className="flex items-center space-x-3 md:space-x-4">
+                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
+                <span className="text-base md:text-lg lg:text-xl text-[#232323]">hello@ampilates.sg</span>
+              </div>
+
               <div className="flex items-center space-x-3 md:space-x-4">
                 <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
                 <span className="text-base md:text-lg lg:text-xl text-[#232323]">Punggol Coast Mall: (65) 8333-5316</span>
+              </div>
+
+              <div className="flex items-center space-x-3 md:space-x-4">
+                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
+                <span className="text-base md:text-lg lg:text-xl text-[#232323]">pc@ampilates.sg</span>
               </div>
             </div>
           </div>

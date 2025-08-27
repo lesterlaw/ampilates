@@ -164,8 +164,9 @@ export default function Home() {
                 <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
               </p>
               <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                Take this class and learn about the equipments, safety measures,
-                terms and cues of a reformer pilates class.
+                <strong>Never Tried Reformer Pilates before?</strong>
+                <br />
+                This Introductory Class is the perfect first step. You’ll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we’ll guide you through body alignment basics to help you move with confidence and ease.
               </p>
             </div>
           </div>

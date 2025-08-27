@@ -240,10 +240,13 @@ export default function Home() {
       <section className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8 mb-8 md:mb-12">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-4">
-            Our Clients' Experiences
+            Member Reviews
           </h2>
+          <p className="text-base md:text-lg text-[#656565]">
+            <strong>Hear from Our Community</strong>
+          </p>
           <p className="text-base md:text-lg text-[#656565] mb-8 md:mb-12">
-            Hear what our client shave to say about their experience.
+            Discover what our members love about am Pilates and how Reformer Pilates has transformed their strength, confidence, and well-being.
           </p>
         </div>
 

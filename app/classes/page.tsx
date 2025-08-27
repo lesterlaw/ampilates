@@ -102,9 +102,10 @@ export default function Classes() {
                 <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
               </p>
               <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                For the new to pilates girlies who want to become stronger and
-                work on stability. Learn how to work on your core, shoulder and
-                hip stabilisers.
+                <strong>Your Next Step to Mastering Pilates!</strong>
+              </p>
+              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
+                This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence. Expect a strong focus on alignment, breath, core activation, and precision—perfect for anyone looking to solidify their Pilates fundamentals, whether you're just starting out or leveling up your practice.
               </p>
             </div>
           </div>

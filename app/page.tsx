@@ -74,11 +74,18 @@ export default function Home() {
               <br />
               Reformer Group Class
             </h3>
-            <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-              At am Pilates, we aim to create a community of like-minded ladies
-              who can gather in a safe and welcoming environment to experience
-              reformer pilates.
-            </p>
+            <div className="text-sm md:text-base text-[#656565] leading-relaxed">
+              <p>
+                Discover the <strong>benefits</strong> of Reformer Pilates, including:
+              </p>
+              <ul className="list-disc list-inside mt-2">
+                <li>Core Strength</li>
+                <li>Flexibility</li>
+                <li>Mind-Body Connection</li>
+                <li>Injury Prevention</li>
+                <li>Posture Enhancement</li>
+              </ul>
+            </div>
           </div>
 
           <div className="text-center">
@@ -95,11 +102,18 @@ export default function Home() {
               <br />
               1-to-1 Sessions
             </h3>
-            <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-              At am Pilates, we aim to create a community of like-minded ladies
-              who can gather in a safe and welcoming environment to experience
-              reformer pilates.
-            </p>
+            <div className="text-sm md:text-base text-[#656565] leading-relaxed">
+              <p>
+                Discover the <strong>benefits</strong> of Reformer Pilates, including:
+              </p>
+              <ul className="list-disc list-inside mt-2">
+                <li>Core Strength</li>
+                <li>Flexibility</li>
+                <li>Mind-Body Connection</li>
+                <li>Injury Prevention</li>
+                <li>Posture Enhancement</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

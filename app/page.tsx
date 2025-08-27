@@ -139,8 +139,8 @@ export default function Home() {
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-6 md:mb-8">
           Our Classes
         </h2>
-        <p className="text-base md:text-lg text-[#656565] mb-4 max-w-2xl">
-          New to am Pilates? Your journey beginswith a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
+        <p className="text-lg md:text-xl text-[#656565] leading-snug mb-4 w-full">
+          New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12">

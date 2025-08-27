@@ -218,8 +218,9 @@ export default function Home() {
                 <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
               </p>
               <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                Time to work on your flexibility and mobility – learn to improve
-                your range of motion to relieve muscle tension and stress.
+                <strong>For the Pilates Girlies Starting Their Strength Journey. ​</strong>
+                <br />
+                Ready to feel stronger and more stable? This class is your go-to for learning how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.
               </p>
             </div>
           </div>

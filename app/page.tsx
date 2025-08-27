@@ -56,9 +56,7 @@ export default function Home() {
               Exclusive
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-              At am Pilates, we aim to create a community of like-minded ladies
-              who can gather in a safe and welcoming environment to experience
-              reformer pilates.
+              We’re building a vibrant community of like-minded women who come together in a safe, supportive, and welcoming space to experience the transformative power of Reformer Pilates.​
             </p>
           </div>
 

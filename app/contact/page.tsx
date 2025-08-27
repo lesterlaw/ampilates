@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, ChevronDown } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -75,10 +75,13 @@ export default function Contact() {
             />
             <div>
               <label className="block text-[#656565] text-sm md:text-base mb-2">Location</label>
-              <select className="w-full p-3 md:p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base">
-                <option>Jurong CPF</option>
-                <option>Punggol Coast Mall</option>
-              </select>
+              <div className="relative">
+                <select className="w-full p-3 md:p-4 pr-10 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base appearance-none">
+                  <option>Jurong CPF</option>
+                  <option>Punggol Coast Mall</option>
+                </select>
+                <ChevronDown className="pointer-events-none absolute right-4 md:right-5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#656565]" />
+              </div>
             </div>
             <textarea
               placeholder="Your message"

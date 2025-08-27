@@ -235,19 +235,26 @@ export default function Classes() {
               className="object-cover opacity-30"
             />
             <div className="relative z-10 flex flex-col md:flex-row mx-6 md:mx-16 items-center justify-center md:justify-between h-full text-center text-white">
-              <div className="mb-6 md:mb-0">
+              <div className="mb-6 md:mb-0 text-left">
                 <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
-                  Get A Free Trial
+                  First-Time Trial at $19!​
                 </h2>
                 <p className="text-lg md:text-xl mb-6 md:mb-8">
-                  Get your first session on us.
+                  Discover the strength, balance, and
                   <br />
-                  Experience a trial with us
+                  grace of Reformer Pilates in a welcoming
+                  <br />
+                  and empowering space.​
+                  <br />
+                  <br />
+                  Join us at am Pilates and experience the
+                  <br />
+                  difference.​
                 </p>
               </div>
               <Link href="/trial">
                 <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
-                  Get Free Trial
+                  Get Trial Now
                 </button>
               </Link>
             </div>

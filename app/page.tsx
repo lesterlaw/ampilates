@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, MapPin } from "lucide-react";
 
 export default function Home() {
   return (
@@ -90,12 +90,7 @@ export default function Home() {
 
           <div className="text-center">
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Image
-                src={"/images/private-sessions.png"}
-                alt="Private Sessions"
-                width={64}
-                height={64}
-              />
+              <MapPin className="w-16 h-16 text-[#80978b]" strokeWidth={2.5} />
             </div>
             <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
               Conveniently

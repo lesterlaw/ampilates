@@ -155,7 +155,7 @@ export default function Classes() {
                 Trial Classes
               </h2>
               <p className="text-[#80978b] text-base md:text-lg">
-                For first time am Pilates members only.
+                Offer valid for first-time customers only.
               </p>
             </div>
 
@@ -193,7 +193,7 @@ export default function Classes() {
                 Class Passes
               </h2>
               <p className="text-[#80978b] text-base md:text-lg">
-                For all members.
+                Applicable for all members.
               </p>
             </div>
 

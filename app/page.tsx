@@ -32,7 +32,7 @@ export default function Home() {
           </h2>
           <p className="text-lg md:text-xl text-[#656565] max-w-5xl mx-auto leading-relaxed px-4 md:px-0">
             Discover the beauty of Pilates at am Pilates. Explore our diverse
-            classes, designed to empower and strengthen your body. Feel the
+            classes, designed to <strong>empower</strong> and <strong>strengthen</strong> your body. Feel the
             positive energy flow as you engage in movement tailored to your
             needs. Let’s embark on this journey together, embracing the power of
             Pilates.

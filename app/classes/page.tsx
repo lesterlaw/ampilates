@@ -52,8 +52,7 @@ export default function Classes() {
           Our Classes
         </h1>
         <p className="text-base md:text-lg text-[#656565] mb-8 md:mb-12 max-w-3xl">
-          *Please note one Introductory Class is required before you can enroll
-          in the Essential Strength and Active Mobility classes.
+          New to am Pilates? Your journey beginswith a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12">

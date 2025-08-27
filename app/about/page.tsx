@@ -11,9 +11,13 @@ export default function About() {
               Welcome to am Pilates
             </h1>
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Discover the beauty of Pilates at am Pilates, a serene studio in
-              the West of Singapore. Our diverse classes are designed to empower
-              and strengthen your body, creating a deeper mind-body connection.
+              Discover the transformative power of movement.
+              <br /><br />
+              Our diverse range of Pilates classes is thoughtfully designed to empower, strengthen, and energize your body. Whether you're a beginner or seasoned practitioner, each session is tailored to meet your unique needs—helping you move with intention and feel the flow of positive energy.
+              <br /><br />
+              Let’s embark on this journey together, embracing the strength, balance, and vitality that Pilates brings.
+              <br /><br />
+              Join us at our tranquil studio on the West side of Singapore at Jurong CPF, or experience our brand-new sanctuary at Punggol Coast Mall in the North-East—each space crafted to bring harmony and wellness closer to you.
             </p>
           </div>
           <Image
@@ -288,30 +292,21 @@ export default function About() {
               <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" />
               </svg>
-              <span className="text-white font-medium text-sm md:text-base">SafeClean</span>
+              <span className="text-white font-medium text-sm md:text-base">Changing Rooms</span>
             </div>
 
             <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-6 py-2 md:py-3">
               <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2-5v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v7h-2z" />
               </svg>
-              <span className="text-white font-medium text-sm md:text-base">
-                Toilets with Showers
-              </span>
+              <span className="text-white font-medium text-sm md:text-base">Dresser Station with Hairdryer</span>
             </div>
 
             <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-6 py-2 md:py-3">
               <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6zM16 16h-3v3h-2v-3H8v-2h3v-3h2v3h3v2z" />
               </svg>
-              <span className="text-white font-medium text-sm md:text-base">Lockers</span>
-            </div>
-
-            <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-6 py-2 md:py-3">
-              <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
-                <path d="M5.64 20l-.07-.07c-.57-.81-.57-1.92 0-2.73l.07-.07L12 10.76l6.36 6.37c.39.39.39 1.02 0 1.41-.39.39-1.02.39-1.41 0L12 13.59l-4.95 4.95c-.39.39-1.02.39-1.41 0zM12 3l7 7H5l7-7z" />
-              </svg>
-              <span className="text-white font-medium text-sm md:text-base">Water Cooler</span>
+              <span className="text-white font-medium text-sm md:text-base">Restrooms</span>
             </div>
           </div>
 
@@ -321,30 +316,21 @@ export default function About() {
               <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" />
               </svg>
-              <span className="text-white font-medium text-sm md:text-base">SafeClean</span>
+              <span className="text-white font-medium text-sm md:text-base">Shower Facility</span>
             </div>
 
             <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-6 py-2 md:py-3">
               <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2-5v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v7h-2z" />
               </svg>
-              <span className="text-white font-medium text-sm md:text-base">
-                Toilets with Showers
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-6 py-2 md:py-3">
-              <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
-                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6zM16 16h-3v3h-2v-3H8v-2h3v-3h2v3h3v2z" />
-              </svg>
-              <span className="text-white font-medium text-sm md:text-base">Lockers</span>
+              <span className="text-white font-medium text-sm md:text-base">Towels</span>
             </div>
 
             <div className="flex items-center gap-2 md:gap-3 bg-white/20 backdrop-blur-sm rounded-full px-3 md:px-6 py-2 md:py-3">
               <svg className="w-4 h-4 md:w-5 md:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M5.64 20l-.07-.07c-.57-.81-.57-1.92 0-2.73l.07-.07L12 10.76l6.36 6.37c.39.39.39 1.02 0 1.41-.39.39-1.02.39-1.41 0L12 13.59l-4.95 4.95c-.39.39-1.02.39-1.41 0zM12 3l7 7H5l7-7z" />
               </svg>
-              <span className="text-white font-medium text-sm md:text-base">Water Cooler</span>
+              <span className="text-white font-medium text-sm md:text-base">Water Station</span>
             </div>
           </div>
         </div>

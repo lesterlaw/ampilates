@@ -10,7 +10,9 @@ export default function Contact() {
           <div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#80978b] mb-6 md:mb-8">Contact Us</h1>
             <p className="text-lg md:text-xl text-[#656565] mb-6 md:mb-8 leading-relaxed">
-              We are here to help you achieve your fitness goals at am Pilates. Let us know how we can assist you and expect a supportive environment perfect for everybody.
+              <strong>We're here to support you on your fitness journey at am Pilates.</strong>
+              <br />
+              Let us know how we can assist you—our welcoming and inclusive environment is designed to help everyone feel comfortable and empowered to reach their goals.
             </p>
             
             {/* Contact Information */}

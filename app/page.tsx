@@ -98,21 +98,14 @@ export default function Home() {
               />
             </div>
             <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
-              Private
+              Conveniently
               <br />
-              1-to-1 Sessions
+              Located
             </h3>
             <div className="text-sm md:text-base text-[#656565] leading-relaxed">
               <p>
-                Discover the <strong>benefits</strong> of Reformer Pilates, including:
+                Join us at our serene studio in the West side of Singapore at Jurong CPF, or experience our brand new space at Punggol Coast Mall in the North-East — thoughtfully designed to bring balance and vitality closer to you.​
               </p>
-              <ul className="list-disc list-inside mt-2">
-                <li>Core Strength</li>
-                <li>Flexibility</li>
-                <li>Mind-Body Connection</li>
-                <li>Injury Prevention</li>
-                <li>Posture Enhancement</li>
-              </ul>
             </div>
           </div>
         </div>

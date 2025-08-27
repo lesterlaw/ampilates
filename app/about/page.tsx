@@ -450,10 +450,12 @@ export default function About() {
                   First-Time Trial at $19!​
                 </h2>
                 <p className="text-[17px] md:text-[19px] mb-6 md:mb-8">
-                  Discover the strength, balance, and grace of Reformer Pilates in a welcoming and empowering space. Join us at am Pilates and experience the difference.​
+                  Discover the strength, balance, and grace of Reformer Pilates in a welcoming and empowering space.
+                  <br />
+                  Join us at am Pilates and experience the difference.​
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
+              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-8 md:px-12 py-3 rounded-full font-semibold whitespace-nowrap">
                 Get Trial Now
               </button>
             </div>

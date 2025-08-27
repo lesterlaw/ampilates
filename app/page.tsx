@@ -31,11 +31,11 @@ export default function Home() {
             We are am Pilates
           </h2>
           <p className="text-lg md:text-xl text-[#656565] max-w-5xl mx-auto leading-relaxed px-4 md:px-0">
-            Discover the beauty of Pilates at am Pilates, a serene studio in the
-            West of Singapore. Our diverse classes are designed to empower and
-            strengthen your body, creating a deeper mind-body connection. Feel
-            the positive energy flow as you engage in movement tailored to your
-            needs. Your body, your ability, our passion.
+            Discover the beauty of Pilates at am Pilates. Explore our diverse
+            classes, designed to empower and strengthen your body. Feel the
+            positive energy flow as you engage in movement tailored to your
+            needs. Let’s embark on this journey together, embracing the power of
+            Pilates.
           </p>
         </div>
 

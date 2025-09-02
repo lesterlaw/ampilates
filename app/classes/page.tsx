@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star } from "lucide-react";
+import DifficultyIcon from "../components/DifficultyIcon";
 import Link from "next/link";
 
 export default function Classes() {
@@ -71,9 +71,9 @@ export default function Classes() {
               </h3>
               <p className="text-[#232323] mb-2 flex items-center">
                 Difficulty level:
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-2" />
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
               </p>
               <p className="text-sm md:text-base text-[#656565] leading-relaxed">
                 <strong>Never Tried Reformer Pilates before?</strong>
@@ -98,8 +98,8 @@ export default function Classes() {
               </h3>
               <p className="text-[#232323] mb-2 flex items-center">
                 Difficulty level:
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-2" />
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
               </p>
               <p className="text-sm md:text-base text-[#656565] leading-relaxed">
                 <strong>Your Next Step to Mastering Pilates!</strong>
@@ -125,9 +125,9 @@ export default function Classes() {
               </h3>
               <p className="text-[#232323] mb-2 flex items-center">
                 Difficulty level:
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-2" />
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
-                <Star className="w-4 h-4 fill-[#80978b] text-[#80978b] ml-0.5" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
+                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
               </p>
               <p className="text-sm md:text-base text-[#656565] leading-relaxed">
                 <strong>For the Pilates Girlies Starting Their Strength Journey. ​</strong>

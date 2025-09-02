@@ -25,7 +25,7 @@ export default function About() {
             alt="About Hero"
             width={400}
             height={400}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-4xl"
           />
         </div>
       </section>
@@ -354,67 +354,67 @@ export default function About() {
                 alt="Sarah Johnson"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-lg"
+                className="w-full h-48 md:h-56 object-cover rounded-2xl"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
+              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
                   Sarah Johnson
                 </h3>
                 <p className="text-white/90 text-sm font-medium">Lead Instructor</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-1.png"
+                src="/images/our-team-2.png"
                 alt="Emily Chen"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-lg"
+                className="w-full h-48 md:h-56 object-cover rounded-2xl"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
+              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
                   Emily Chen
                 </h3>
                 <p className="text-white/90 text-sm font-medium">Senior Instructor</p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-1.png"
+                src="/images/our-team-3.png"
                 alt="Emily Chen"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-lg"
+                className="w-full h-48 md:h-56 object-cover rounded-2xl"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
+              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
                   Emily Chen
                 </h3>
                 <p className="text-white/90 text-sm font-medium">Senior Instructor</p>
-              </div>
+              </div> */}
               </div>
           </div>
 
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-1.png"
+                src="/images/our-team-4.png"
                 alt="Amanda Lee"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-lg"
+                className="w-full h-48 md:h-56 object-cover rounded-2xl"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
+              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
                   Amanda Lee
                 </h3>
                 <p className="text-white/90 text-sm font-medium">Instructor</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

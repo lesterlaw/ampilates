@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star, Quote, MapPin } from "lucide-react";
+import { ChevronDown, Star } from "lucide-react";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
 
         <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
           <Image
-            src={"/images/pilates-hero.png"}
+            src={"/images/homepage-banner.png"}
             alt="Pilates Studio Interior"
             fill
             className="object-cover"
@@ -90,7 +90,21 @@ export default function Home() {
 
           <div className="text-center">
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MapPin className="w-16 h-16 text-[#80978b]" strokeWidth={2.5} />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                id="fi_3425077"
+                className="w-16 h-16 text-[#80978b]"
+                aria-hidden="true"
+                focusable="false"
+                fill="currentColor"
+              >
+                <g>
+                  <path d="M62.594,112.389a1.755,1.755,0,0,0,1.383.708H64a1.749,1.749,0,0,0,1.377-.671c1.448-1.847,35.45-45.549,35.45-73.227a36.827,36.827,0,0,0-73.654,0c0,10.6,5.981,26.165,17.779,46.26C53.668,100.305,62.506,112.27,62.594,112.389ZM64,5.872A33.364,33.364,0,0,1,97.327,39.2c0,23.369-26.776,60.519-33.291,69.21C57.6,99.383,30.673,60.388,30.673,39.2A33.364,33.364,0,0,1,64,5.872Z"></path>
+                  <path d="M85.17,39.2A21.17,21.17,0,1,0,64,60.369,21.193,21.193,0,0,0,85.17,39.2ZM64,56.869A17.67,17.67,0,1,1,81.67,39.2,17.69,17.69,0,0,1,64,56.869Z"></path>
+                  <path d="M81.844,101.166a1.751,1.751,0,0,0-.426,3.475c15.067,1.849,19.942,5.337,19.942,6.736,0,2.627-13.186,7.74-37.36,7.74S26.64,114,26.64,111.377c0-1.5,4.781-4.569,17.613-6.425a1.751,1.751,0,0,0-.5-3.465c-9.4,1.361-20.612,4.18-20.612,9.89,0,8.247,24.435,11.24,40.86,11.24s40.86-2.993,40.86-11.24C104.86,104.951,90.44,102.222,81.844,101.166Z"></path>
+                </g>
+              </svg>
             </div>
             <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
               Conveniently
@@ -143,17 +157,22 @@ export default function Home() {
           New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12">
+        <div
+          className="mt-8 md:mt-12 overflow-x-auto"
+          role="region"
+          aria-label="Our Classes"
+        >
+          <div className="flex gap-6 md:gap-8 pr-4">
           {/* Introduction Class */}
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
             <Image
-              src={"/images/our-class-1.png"}
+              src={"/images/introduction-class.png"}
               alt="Introduction Class"
               width={400}
               height={300}
-              className="w-full h-48 md:h-64 rounded-lg object-contain"
+              className="w-full h-48 md:h-64 rounded-3xl object-cover"
             />
-            <div className="p-4 md:p-6">
+            <div className="py-4 md:py-6 px-2 md:px-3">
               <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
                 Introduction Class
               </h3>
@@ -172,13 +191,13 @@ export default function Home() {
           </div>
 
           {/* Essential Strength 1 */}
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
             <Image
-              src={"/images/our-class-2.png"}
+              src={"/images/essential-strength-1.png"}
               alt="Essential Strength"
               width={400}
               height={300}
-              className="w-full h-48 md:h-64 rounded-lg object-contain"
+              className="w-full h-48 md:h-64 rounded-3xl object-cover"
             />
             <div className="p-4 md:p-6">
               <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
@@ -199,13 +218,13 @@ export default function Home() {
           </div>
 
           {/* Essential Strength 2 */}
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
             <Image
-              src={"/images/our-class-3.png"}
+              src={"/images/essential-strength-2.png"}
               alt="Essential Strength Flexibility"
               width={400}
               height={300}
-              className="w-full h-48 md:h-64 rounded-lg object-contain"
+              className="w-full h-48 md:h-64 rounded-3xl object-cover"
             />
             <div className="p-4 md:p-6">
               <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
@@ -223,6 +242,29 @@ export default function Home() {
                 Ready to feel stronger and more stable? This class is your go-to for learning how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.
               </p>
             </div>
+          </div>
+
+          {/* Strengthening Core */}
+          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
+            <Image
+              src={"/images/strengthening-core.png"}
+              alt="Strengthening Core"
+              width={400}
+              height={300}
+              className="w-full h-48 md:h-64 rounded-3xl object-cover"
+            />
+            <div className="py-4 md:py-6 px-2 md:px-3">
+              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
+                Strengthening Core
+              </h3>
+              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
+                <strong>Flexibility &amp; Mobility Goals? Let’s Get Moving!​</strong>
+              </p>
+              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
+                It’s time to unlock your range of motion and ease muscle tension. In this class, you’ll learn how to improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.
+              </p>
+            </div>
+          </div>
           </div>
         </div>
 
@@ -333,11 +375,14 @@ export default function Home() {
               className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]"
             />
             <div>
-              <label className="block text-[#656565] mb-2">Location</label>
-              <select className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]">
-                <option>Jurong CPF</option>
-                <option>Punggol Coast Mall</option>
-              </select>
+              <label className="block text-[#656565] text-sm md:text-base mb-2">Location</label>
+              <div className="relative">
+                <select className="w-full p-3 md:p-4 pr-10 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base appearance-none">
+                  <option>Jurong CPF</option>
+                  <option>Punggol Coast Mall</option>
+                </select>
+                <ChevronDown className="pointer-events-none absolute right-4 md:right-5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#656565]" />
+              </div>
             </div>
             <textarea
               placeholder="Your message"

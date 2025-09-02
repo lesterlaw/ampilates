@@ -45,7 +45,7 @@ export default function Contact() {
               alt="am Pilates Studio Reception"
               width={650}
               height={470}
-              className="w-full h-auto rounded-[20px] md:rounded-[30px] object-cover"
+              className="w-full h-auto rounded-[20px] md:rounded-[30px] object-cover rounded-4xl"
             />
           </div>
         </div>

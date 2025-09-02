@@ -150,7 +150,7 @@ export default function FAQ() {
               alt="FAQ Hero"
               width={400}
               height={400}
-              className="w-full max-w-md h-auto object-cover rounded-2xl"
+              className="w-full max-w-md h-auto object-cover rounded-4xl"
             />
           </div>
         </div>

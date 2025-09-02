@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import DifficultyIcon from "./components/DifficultyIcon";
+import ClassesCarousel from "./components/ClassesCarousel";
+import FadeInOnView from "./components/FadeInOnView";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="text-center mb-8 md:mb-12">
           <h1 className="font-serif text-4xl md:text-6xl lg:text-8xl font-semibold text-[#232323] leading-tight mb-6 md:mb-8">
             Empowering you,
@@ -23,20 +25,20 @@ export default function Home() {
             className="object-cover"
           />
         </div>
-      </section>
+      </FadeInOnView>
 
       {/* About Section */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-6 md:mb-8">
             We are am Pilates
           </h2>
           <p className="text-lg md:text-xl text-[#656565] max-w-5xl mx-auto leading-relaxed px-4 md:px-0">
             Discover the beauty of Pilates at am Pilates. Explore our diverse
-            classes, designed to <strong>empower</strong> and <strong>strengthen</strong> your body. Feel the
-            positive energy flow as you engage in movement tailored to your
-            needs. Let’s embark on this journey together, embracing the power of
-            Pilates.
+            classes, designed to <strong>empower</strong> and{" "}
+            <strong>strengthen</strong> your body. Feel the positive energy flow
+            as you engage in movement tailored to your needs. Let’s embark on
+            this journey together, embracing the power of Pilates.
           </p>
         </div>
 
@@ -57,7 +59,9 @@ export default function Home() {
               Exclusive
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-              We’re building a vibrant community of like-minded women who come together in a safe, supportive, and welcoming space to experience the transformative power of Reformer Pilates.​
+              We’re building a vibrant community of like-minded women who come
+              together in a safe, supportive, and welcoming space to experience
+              the transformative power of Reformer Pilates.​
             </p>
           </div>
 
@@ -77,7 +81,8 @@ export default function Home() {
             </h3>
             <div className="text-sm md:text-base text-[#656565] leading-relaxed">
               <p>
-                Discover the <strong>benefits</strong> of Reformer Pilates, including:
+                Discover the <strong>benefits</strong> of Reformer Pilates,
+                including:
               </p>
               <ul className="list-disc list-inside mt-2">
                 <li>Core Strength</li>
@@ -114,15 +119,18 @@ export default function Home() {
             </h3>
             <div className="text-sm md:text-base text-[#656565] leading-relaxed">
               <p>
-                Join us at our serene studio in the West side of Singapore at Jurong CPF, or experience our brand new space at Punggol Coast Mall in the North-East — thoughtfully designed to bring balance and vitality closer to you.​
+                Join us at our serene studio in the West side of Singapore at
+                Jurong CPF, or experience our brand new space at Punggol Coast
+                Mall in the North-East — thoughtfully designed to bring balance
+                and vitality closer to you.​
               </p>
             </div>
           </div>
         </div>
-      </section>
+      </FadeInOnView>
 
       {/* Free Trial CTA */}
-      <section className="relative">
+      <FadeInOnView as="section" className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
           <div className="relative h-80 md:h-72 bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
@@ -137,7 +145,8 @@ export default function Home() {
                   First-Time Trial at $19!​
                 </h2>
                 <p className="text-[17px] md:text-[19px] mb-6 md:mb-8">
-                  Discover the strength, balance, and grace of Reformer Pilates in a welcoming and empowering space.
+                  Discover the strength, balance, and grace of Reformer Pilates
+                  in a welcoming and empowering space.
                   <br />
                   Join us at am Pilates and experience the difference.​
                 </p>
@@ -148,139 +157,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </FadeInOnView>
       {/* Classes Section */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-6 md:mb-8">
-          Our Classes
-        </h2>
-        <p className="text-lg md:text-xl text-[#656565] leading-snug mb-4 w-full">
-          New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
-        </p>
-
-        <div
-          className="mt-8 md:mt-12 overflow-x-auto"
-          role="region"
-          aria-label="Our Classes"
-        >
-          <div className="flex gap-6 md:gap-8 pr-4">
-          {/* Introduction Class */}
-          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
-            <Image
-              src={"/images/introduction-class.png"}
-              alt="Introduction Class"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-3xl object-cover"
-            />
-            <div className="py-4 md:py-6 px-2 md:px-3">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Introduction Class
-              </h3>
-              <p className="text-[#232323] mb-2 flex items-center">
-                Difficulty level:
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>Never Tried Reformer Pilates before?</strong>
-                <br />
-                This Introductory Class is the perfect first step. You’ll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we’ll guide you through body alignment basics to help you move with confidence and ease.
-              </p>
-            </div>
-          </div>
-
-          {/* Essential Strength 1 */}
-          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
-            <Image
-              src={"/images/essential-strength-1.png"}
-              alt="Essential Strength"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-3xl object-cover"
-            />
-            <div className="p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Essential Strength
-              </h3>
-              <p className="text-[#232323] mb-2 flex items-center">
-                Difficulty level:
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>Your Next Step to Mastering Pilates!</strong>
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence. Expect a strong focus on alignment, breath, core activation, and precision—perfect for anyone looking to solidify their Pilates fundamentals, whether you're just starting out or leveling up your practice.
-              </p>
-            </div>
-          </div>
-
-          {/* Essential Strength 2 */}
-          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
-            <Image
-              src={"/images/essential-strength-2.png"}
-              alt="Essential Strength Flexibility"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-3xl object-cover"
-            />
-            <div className="p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Essential Strength
-              </h3>
-              <p className="text-[#232323] mb-2 flex items-center">
-                Difficulty level:
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>For the Pilates Girlies Starting Their Strength Journey. ​</strong>
-                <br />
-                Ready to feel stronger and more stable? This class is your go-to for learning how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.
-              </p>
-            </div>
-          </div>
-
-          {/* Strengthening Core */}
-          <div className="rounded-lg overflow-hidden flex-none w-[85%] sm:w-[70%] md:w-1/3">
-            <Image
-              src={"/images/strengthening-core.png"}
-              alt="Strengthening Core"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-3xl object-cover"
-            />
-            <div className="py-4 md:py-6 px-2 md:px-3">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Strengthening Core
-              </h3>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>Flexibility &amp; Mobility Goals? Let’s Get Moving!​</strong>
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                It’s time to unlock your range of motion and ease muscle tension. In this class, you’ll learn how to improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.
-              </p>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-8">
-          <button
-            className="bg-[#80978b] hover:bg-[#6b8276] cursor-pointer text-white px-10 md:px-12 py-3 rounded-full font-semibold transition-colors duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2 whitespace-nowrap"
-            aria-label="Start your free trial"
-          >
-            Get Trial Now
-          </button>
-        </div>
-      </section>
+      <FadeInOnView>
+        <ClassesCarousel
+          heading="Our Classes"
+          intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​"
+        />
+      </FadeInOnView>
 
       {/* Testimonials Section */}
-      <section className="py-8 md:py-16">
+      <FadeInOnView as="section" className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8 mb-8 md:mb-12">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-4">
             Member Reviews
@@ -289,7 +176,8 @@ export default function Home() {
             <strong>Hear from Our Community</strong>
           </p>
           <p className="text-base md:text-lg text-[#656565] mb-8 md:mb-12">
-            Discover what our members love about am Pilates and how Reformer Pilates has transformed their strength, confidence, and well-being.
+            Discover what our members love about am Pilates and how Reformer
+            Pilates has transformed their strength, confidence, and well-being.
           </p>
         </div>
 
@@ -345,10 +233,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </FadeInOnView>
 
       {/* Contact Section */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="bg-[#80978b]/10 rounded-[30px] md:rounded-[50px] p-6 md:p-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] text-center mb-4">
             Contact Us
@@ -376,7 +264,9 @@ export default function Home() {
               className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]"
             />
             <div>
-              <label className="block text-[#656565] text-sm md:text-base mb-2">Location</label>
+              <label className="block text-[#656565] text-sm md:text-base mb-2">
+                Location
+              </label>
               <div className="relative">
                 <select className="w-full p-3 md:p-4 pr-10 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base appearance-none">
                   <option>Jurong CPF</option>
@@ -400,9 +290,7 @@ export default function Home() {
             </div>
           </form>
         </div>
-      </section>
-
-
+      </FadeInOnView>
     </>
   );
 }

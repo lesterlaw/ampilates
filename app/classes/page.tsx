@@ -1,6 +1,10 @@
+"use client"
 import Image from "next/image";
 import DifficultyIcon from "../components/DifficultyIcon";
 import Link from "next/link";
+import { useCallback, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function Classes() {
   const trialClasses = [
@@ -44,99 +48,135 @@ export default function Classes() {
     },
   ];
 
+  const classesData = [
+    {
+      title: "Introduction Class",
+      imageSrc: "/images/our-class-1.png",
+      imageAlt: "Introduction Class",
+      difficulty: 3,
+      description:
+        "Never Tried Reformer Pilates before? This Introductory Class is the perfect first step. You'll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we'll guide you through body alignment basics to help you move with confidence and ease.",
+    },
+    {
+      title: "Essential Strength",
+      imageSrc: "/images/our-class-2.png",
+      imageAlt: "Essential Strength",
+      difficulty: 2,
+      description:
+        "Your Next Step to Mastering Pilates! This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence.",
+    },
+    {
+      title: "Essential Strength",
+      imageSrc: "/images/our-class-3.png",
+      imageAlt: "Essential Strength Flexibility",
+      difficulty: 3,
+      description:
+        "For the Pilates Girlies Starting Their Strength Journey. Ready to feel stronger and more stable? This class is your go-to for learning how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.",
+    },
+    {
+      title: "Strengthening Core",
+      imageSrc: "/images/strengthening-core.png",
+      imageAlt: "Strengthening Core",
+      difficulty: 0,
+      description:
+        "Flexibility & Mobility Goals? Let's Get Moving! Improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+
+  const total = classesData.length;
+  const visibleCount = 3;
+  const canGoPrev = currentIndex > 0;
+  const canGoNext = currentIndex < total - visibleCount;
+
+  const handlePrev = useCallback(() => {
+    if (canGoPrev) {
+      setCurrentIndex(prev => prev - 1);
+    }
+  }, [canGoPrev]);
+
+  const handleNext = useCallback(() => {
+    if (canGoNext) {
+      setCurrentIndex(prev => prev + 1);
+    }
+  }, [canGoNext]);
+
   return (
     <>
       {/* Classes Hero Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#80978b] mb-6 md:mb-8">
-          Our Classes
-        </h1>
-        <p className="text-base md:text-lg text-[#656565] mb-8 md:mb-12 max-w-3xl">
-          New to am Pilates? Your journey beginswith a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
-        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12">
-          {/* Introduction Class */}
-          <div className="rounded-lg overflow-hidden">
-            <Image
-              src={"/images/our-class-1.png"}
-              alt="Introduction Class"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-lg object-contain"
-            />
-            <div className="p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Introduction Class
-              </h3>
-              <p className="text-[#232323] mb-2 flex items-center">
-                Difficulty level:
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>Never Tried Reformer Pilates before?</strong>
-                <br />
-                This Introductory Class is the perfect first step. You’ll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we’ll guide you through body alignment basics to help you move with confidence and ease.
-              </p>
-            </div>
-          </div>
-
-          {/* Essential Strength 1 */}
-          <div className="rounded-lg overflow-hidden">
-            <Image
-              src={"/images/our-class-2.png"}
-              alt="Essential Strength"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-lg object-contain"
-            />
-            <div className="p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Essential Strength
-              </h3>
-              <p className="text-[#232323] mb-2 flex items-center">
-                Difficulty level:
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>Your Next Step to Mastering Pilates!</strong>
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence. Expect a strong focus on alignment, breath, core activation, and precision—perfect for anyone looking to solidify their Pilates fundamentals, whether you're just starting out or leveling up your practice.
-              </p>
-            </div>
-          </div>
-
-          {/* Essential Strength 2 */}
-          <div className="rounded-lg overflow-hidden">
-            <Image
-              src={"/images/our-class-3.png"}
-              alt="Essential Strength Flexibility"
-              width={400}
-              height={300}
-              className="w-full h-48 md:h-64 rounded-lg object-contain"
-            />
-            <div className="p-4 md:p-6">
-              <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">
-                Essential Strength
-              </h3>
-              <p className="text-[#232323] mb-2 flex items-center">
-                Difficulty level:
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-2" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-                <DifficultyIcon className="w-4 h-4 text-[#80978b] ml-0.5" />
-              </p>
-              <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-                <strong>For the Pilates Girlies Starting Their Strength Journey. ​</strong>
-                <br />
-                Ready to feel stronger and more stable? This class is your go-to for learning how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.
-              </p>
-            </div>
-          </div>
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-4 md:mb-6">
+            Our Classes
+          </h2>
+          <p className="text-lg md:text-xl text-[#656565] leading-relaxed max-w-5xl mx-auto px-4 md:px-0">
+            New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
+          </p>
         </div>
+
+        <div className="flex justify-center gap-2 mb-8">
+          <button
+            type="button"
+            onClick={handlePrev}
+            disabled={!canGoPrev}
+            aria-label="Previous classes"
+            className="h-10 w-10 rounded-full border border-[#94aa9f] text-[#80978b] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#f5f5f0] focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            onClick={handleNext}
+            disabled={!canGoNext}
+            aria-label="Next classes"
+            className="h-10 w-10 rounded-full border border-[#94aa9f] text-[#80978b] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#f5f5f0] focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+
+        <div className="relative overflow-hidden" aria-live="polite">
+          <motion.div
+            className="flex transition-transform duration-500 ease-out"
+            animate={{
+              x: prefersReducedMotion ? 0 : `calc(-${currentIndex * (100/3)}% - ${currentIndex * 2}rem)`
+            }}
+            transition={{ duration: prefersReducedMotion ? 0 : 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {classesData.map((item, idx) => (
+              <div
+                key={`${item.title}-${idx}`}
+                className="w-1/3 flex-shrink-0 px-3 md:px-4"
+                role="listitem"
+              >
+                <div className="rounded-lg overflow-hidden">
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 md:h-64 rounded-3xl object-cover"
+                  />
+                  <div className="py-4 md:py-6 px-2 md:px-3">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>
+                    <p className="text-[#232323] mb-2 flex items-center">
+                      Difficulty level:
+                      {[...Array(item.difficulty)].map((_, i) => (
+                        <DifficultyIcon key={i} className="w-4 h-4 text-[#80978b] ml-2 first:ml-2" />
+                      ))}
+                    </p>
+                    <p className="text-sm md:text-base text-[#656565] leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+
 
         <div className="text-center mt-8 md:mt-12">
           <button className="bg-[#80978b] text-white px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg">

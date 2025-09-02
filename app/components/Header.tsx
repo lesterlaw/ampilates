@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const Header = () => {
   const pathname = usePathname();
@@ -51,18 +52,31 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <>
-      <header className="flex items-center justify-between px-4 md:px-8 py-4 max-w-7xl mx-auto relative">
+      <motion.header
+        initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -12 }}
+        animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+        transition={{ duration: prefersReducedMotion ? 0.2 : 0.4 }}
+        className="flex items-center justify-between px-4 md:px-8 py-4 max-w-7xl mx-auto relative"
+      >
         <div className="flex items-center">
           <Link href="/">
-            <Image
-              src="/images/am-pilates-logo.png"
-              alt="am Pilates Logo"
-              width={isMobile ? 60 : 80}
-              height={isMobile ? 60 : 80}
-              className="rounded-full"
-            />
+            <motion.div
+              initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, scale: 0.96 }}
+              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
+              transition={{ duration: prefersReducedMotion ? 0.2 : 0.4, delay: 0.05 }}
+            >
+              <Image
+                src="/images/am-pilates-logo.png"
+                alt="am Pilates Logo"
+                width={isMobile ? 60 : 80}
+                height={isMobile ? 60 : 80}
+                className="rounded-full"
+              />
+            </motion.div>
           </Link>
         </div>
 
@@ -131,7 +145,7 @@ const Header = () => {
             ></span>
           </div>
         </button>
-      </header>
+      </motion.header>
 
       {/* Mobile Menu Overlay */}
       <div

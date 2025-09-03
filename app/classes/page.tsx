@@ -58,7 +58,7 @@ export default function Classes() {
         "Never Tried Reformer Pilates before? This Introductory Class is the perfect first step. You'll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we'll guide you through body alignment basics to help you move with confidence and ease.",
     },
     {
-      title: "Essential Strength",
+      title: "Firm Foundation",
       imageSrc: "/images/our-class-2.png",
       imageAlt: "Essential Strength",
       difficulty: 2,

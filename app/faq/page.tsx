@@ -146,7 +146,7 @@ export default function FAQ() {
           </div>
           <div className="w-full  flex justify-center">
             <Image
-              src="/images/about-hero.png"
+              src="/images/header.png"
               alt="FAQ Hero"
               width={400}
               height={400}

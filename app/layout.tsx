@@ -3,6 +3,7 @@ import { Inter, Playfair_Display, Lexend } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import WhatsAppContact from "./components/WhatsAppContact";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <WhatsAppContact />
         </div>
       </body>
     </html>

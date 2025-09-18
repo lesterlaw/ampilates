@@ -5,7 +5,7 @@ export default function About() {
     <>
       {/* Green Hero Section */}
       <section className="bg-[#80978b] p-6 md:p-16 lg:p-24">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-7xl mx-auto items-center justify-center">
           <div className="text-white w-full">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8">
               Welcome to am Pilates
@@ -21,7 +21,7 @@ export default function About() {
             </p>
           </div>
           <Image
-            src="/images/about-hero.png"
+            src="/images/header.png"
             alt="About Hero"
             width={400}
             height={400}
@@ -234,7 +234,7 @@ export default function About() {
 
           <div className="">
             <Image
-              src={"/images/punggol-outlet.png"}
+              src={"/images/punggol-outlet.jpg"}
               alt="Private Studio"
               width={500}
               height={300}
@@ -350,7 +350,7 @@ export default function About() {
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-1.png"
+                src="/images/our-team.jpg"
                 alt="Sarah Johnson"
                 width={300}
                 height={400}
@@ -368,7 +368,7 @@ export default function About() {
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-2.png"
+                src="/images/our-team1.jpg"
                 alt="Emily Chen"
                 width={300}
                 height={400}
@@ -385,7 +385,7 @@ export default function About() {
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-3.png"
+                src="/images/our-team2.jpg"
                 alt="Emily Chen"
                 width={300}
                 height={400}
@@ -403,7 +403,7 @@ export default function About() {
           <div className="text-center">
             <div className="relative mb-4">
               <Image
-                src="/images/our-team-4.png"
+                src="/images/our-team3.jpg"
                 alt="Amanda Lee"
                 width={300}
                 height={400}

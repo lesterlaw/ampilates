@@ -19,7 +19,7 @@ export default function Home() {
 
         <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
           <Image
-            src={"/images/homepage-banner.png"}
+            src={"/images/homepage-banner.jpg"}
             alt="Pilates Studio Interior"
             fill
             className="object-cover"

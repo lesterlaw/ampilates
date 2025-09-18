@@ -41,11 +41,11 @@ export default function Contact() {
           
           <div className="relative">
             <Image
-              src="/images/about-hero.png"
+              src="/images/header.png"
               alt="am Pilates Studio Reception"
               width={650}
               height={470}
-              className="w-full h-auto rounded-[20px] md:rounded-[30px] object-cover rounded-4xl"
+              className="w-full h-auto md:rounded-[30px] object-cover rounded-4xl"
             />
           </div>
         </div>

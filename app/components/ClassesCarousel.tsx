@@ -24,32 +24,32 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
     () => [
       {
         title: "Introduction Class",
-        imageSrc: "/images/introduction-class.png",
+        imageSrc: "/images/introduction-class.jpg",
         imageAlt: "Introduction Class",
-        difficulty: 3,
+        difficulty: 1,
         description:
           "Never Tried Reformer Pilates before? This Introductory Class is the perfect first step. You'll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we'll guide you through body alignment basics to help you move with confidence and ease.",
       },
       {
-        title: "Essential Strength",
-        imageSrc: "/images/essential-strength-1.png",
-        imageAlt: "Essential Strength",
+        title: "Firm Foundation",
+        imageSrc: "/images/firm-foundation.jpg",
+        imageAlt: "Firm Foundation",
         difficulty: 2,
         description:
           "Your Next Step to Mastering Pilates! This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence.",
       },
       {
         title: "Essential Strength",
-        imageSrc: "/images/essential-strength-2.png",
+        imageSrc: "/images/essential-strength.jpg",
         imageAlt: "Essential Strength Flexibility",
         difficulty: 3,
         description:
           "For the Pilates Girlies Starting Their Strength Journey. Ready to feel stronger and more stable? Learn how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.",
       },
       {
-        title: "Strengthening Core",
-        imageSrc: "/images/strengthening-core.png",
-        imageAlt: "Strengthening Core",
+        title: "Active Mobility",
+        imageSrc: "/images/active-mobility.jpg",
+        imageAlt: "Active Mobility",
         difficulty: 0,
         description:
           "Flexibility & Mobility Goals? Let's Get Moving! Improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.",

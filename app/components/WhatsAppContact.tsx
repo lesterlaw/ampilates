@@ -31,7 +31,7 @@ export default function WhatsAppContact() {
       scale: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 25,
         stiffness: 300,
         duration: 0.3,
@@ -72,7 +72,7 @@ export default function WhatsAppContact() {
       y: 0,
       transition: {
         delay: i * 0.1,
-        type: "spring",
+        type: "spring" as const,
         damping: 25,
         stiffness: 300,
       },

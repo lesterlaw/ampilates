@@ -57,7 +57,7 @@ export default function WhatsAppContact() {
     hover: {
       scale: 1.1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 17,
       },

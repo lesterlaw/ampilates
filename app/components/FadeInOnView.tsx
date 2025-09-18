@@ -1,10 +1,10 @@
 "use client";
 
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, ElementType } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 type FadeInOnViewProps = PropsWithChildren<{
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
   delay?: number;
   className?: string;
 }>;
@@ -12,10 +12,10 @@ type FadeInOnViewProps = PropsWithChildren<{
 const FadeInOnView = ({ as = "div", delay = 0, className, children }: FadeInOnViewProps) => {
   const prefersReducedMotion = useReducedMotion();
 
-  const MotionTag = motion[as as keyof typeof motion] as any;
+  const MotionComponent = motion(as as any);
 
   return (
-    <MotionTag
+    <MotionComponent
       className={className}
       initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
       whileInView={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const FadeInOnView = ({ as = "div", delay = 0, className, children }: FadeInOnVi
       transition={{ duration: prefersReducedMotion ? 0.25 : 0.5, delay }}
     >
       {children}
-    </MotionTag>
+    </MotionComponent>
   );
 };
 

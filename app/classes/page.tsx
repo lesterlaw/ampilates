@@ -77,7 +77,7 @@ export default function Classes() {
       title: "Active Mobility",
       imageSrc: "/images/active-mobility.jpg",
       imageAlt: "Active Mobility",
-      difficulty: 0,
+      difficulty: 3,
       description:
         "Flexibility & Mobility Goals? Let's Get Moving! Improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.",
     },

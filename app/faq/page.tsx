@@ -23,15 +23,19 @@ const faqData: FAQCategory[] = [
     items: [
       {
         question: "What should I wear to class?",
-        answer: "We recommend comfortable, form-fitting athletic wear that allows for full range of movement. Avoid loose clothing that might get caught in the equipment. Grip socks are recommended for better stability on the reformer."
+        answer: "Wear comfy, form-fitting activewear that you can move in easily. Avoid loose clothing that may get caught in the reformer. They help keep you stable on the Reformer. Grip socks are a must for our classes too – for better traction and hygiene purposes. Don't own a pair? Drop by our studio to purchase our very own am Pilates socks!"
       },
       {
-        question: "Do I need to bring anything to class?",
-        answer: "We provide all necessary equipment including reformers, props, and cleaning supplies. Just bring yourself, a water bottle, and a positive attitude! Towels are also provided."
+        question: "Is Reformer Pilates suitable for beginners?",
+        answer: "We welcome all fitness levels. Our teachers are great at modifying exercises to suit beginners and making sure you are comfortable."
       },
       {
-        question: "Is Pilates suitable for beginners?",
-        answer: "Absolutely! Our classes are designed to accommodate all fitness levels. Our certified instructors will provide modifications and adjustments to ensure you feel comfortable and safe throughout your practice."
+        question: "What are the benefits of Reformer Pilates?",
+        answer: "Reformer Pilates is fantastic for improving flexibility, strength, posture, and overall body awareness. Plus, it's a great way to de-stress and feel good!"
+      },
+      {
+        question: "Is there a minimum age required to attend a class?",
+        answer: "Yes, the minimum age required to attend a Reformer Pilates class at am Pilates is 16 years old."
       }
     ]
   },
@@ -41,20 +45,20 @@ const faqData: FAQCategory[] = [
     description: "Questions about packages and memberships?",
     items: [
       {
-        question: "Can I try a reformer pilates class before committing to a membership?",
-        answer: "Yes, we offer packages with trial passes for those who would like to experience reformer pilates before committing to a package."
+        question: "Can I try a Reformer Pilates class before committing to a membership?",
+        answer: "Yes, we offer packages with trial passes for those who would like to experience Reformer Pilates before committing to a package."
       },
       {
         question: "Can I transfer my membership account to another holder?",
-        answer: "Membership transfers are possible under certain circumstances. Please contact our studio directly to discuss your specific situation and any applicable transfer fees."
+        answer: "No, all packages are intended for the recipient who purchased them and are nontransferable."
       },
       {
         question: "When does my class/package become active? Does it have an expiry date?",
-        answer: "Your package becomes active from the date of purchase. Most packages have an expiry date of 3-6 months from activation, depending on the specific package purchased. Check your package details for exact expiry information."
+        answer: "The first class must be booked within 1 month from the date of purchase. Otherwise, remaining sessions will be non-refundable.\n\nSubsequent classes have to be used within the following time frame:\nPurchase of 4 passes: valid for 1 month\nPurchase of 8 Passes: valid for 2 months\nPurchase of 12 Passes: valid for 3 months\nPurchase of 24 Passes: valid for 6 months\nPurchase of 48 Passes: valid for 12 months"
       },
       {
         question: "Can I extend the expiration date of my classes or package?",
-        answer: "Extensions may be available in certain circumstances such as medical reasons or extended travel. Please contact our studio at least 2 weeks before your package expires to discuss extension options and any applicable fees."
+        answer: "Please contact our studio for extension options. Extensions are granted on a case-bycase basis and may require an additional fee."
       }
     ]
   },
@@ -65,34 +69,19 @@ const faqData: FAQCategory[] = [
     items: [
       {
         question: "How do I book a class?",
-        answer: "You can book classes through our online booking system, mobile app, or by calling the studio directly. We recommend booking in advance as classes fill up quickly."
+        answer: "After purchasing our packages, you can book your desired class through our am Pilates application, under the [BOOK] tab. Advanced booking is recommended to secure your spot due to limited reformer beds each session."
       },
       {
         question: "Can I change or cancel my booking?",
-        answer: "Yes, you can modify or cancel your booking up to 12 hours before the class start time without penalty. Late cancellations may result in a charge to your account."
+        answer: "Yes, you can! Just manage your bookings through our app.\n\nNote: Effective 1st Jan 2025, all class cancellations must be made at least 12 hours before the class start time.\nFor cancellations made less than 12 hours before the start of class, a class credit will be deducted from your package."
       },
       {
-        question: "What happens if I'm late to class?",
-        answer: "For safety reasons, we cannot admit students more than 5 minutes after class has started. Please arrive at least 10 minutes early to prepare and set up your equipment."
-      }
-    ]
-  },
-  {
-    id: "cancellation",
-    label: "Cancellation Policy",
-    description: "Our cancellation and refund policies",
-    items: [
-      {
-        question: "What is your cancellation policy?",
-        answer: "Cancellations must be made at least 12 hours in advance to avoid charges. Late cancellations or no-shows will result in the loss of that class credit."
+        question: "How early should I arrive?",
+        answer: "No lateness for Introductory classes. Please be in the studio 10 minutes earlier. It is important to be on time for your own safety (to be warmed up enough to avoid strains/injuries) and to be mindful of other students who are already in class. We allow a 5 minutes grace period for Essential Strength & Active Mobility classes. If you are late and turned away, your credit will still be deducted as if you attended."
       },
       {
-        question: "Can I get a refund for unused classes?",
-        answer: "Refunds are generally not available for unused classes. However, we may consider refunds in exceptional circumstances such as medical issues or relocation. Please contact us to discuss your situation."
-      },
-      {
-        question: "What happens if the studio cancels a class?",
-        answer: "If we need to cancel a class, you will be notified as soon as possible and your class credit will be automatically returned to your account. You can then rebook for another available session."
+        question: "How far in advance can I book my classes?",
+        answer: "You can book your classes up to 8 days in advance, on a first come first serve basis. You may view the class schedule for the whole month on our app or on our Whatsapp catalog. (E.g. Classes for next Friday will be available for booking this Thursday, at 22:00)"
       }
     ]
   },
@@ -102,16 +91,16 @@ const faqData: FAQCategory[] = [
     description: "Information about class types and difficulty levels",
     items: [
       {
-        question: "What types of classes do you offer?",
-        answer: "We offer various reformer Pilates classes including Beginner, Intermediate, Advanced, and specialized classes like Prenatal Pilates and Pilates for Seniors. Each class is designed to target different fitness goals and experience levels."
+        question: "How long is a typical Reformer Pilates class?",
+        answer: "Classes at am Pilates last for 50 minutes. Please arrive 10 minutes before your class to register your attendance and change into your attire."
       },
       {
-        question: "How do I know which class level is right for me?",
-        answer: "Our instructors can help assess your fitness level and recommend appropriate classes. Beginners should start with our Foundation or Beginner classes, while those with Pilates experience can join Intermediate or Advanced sessions."
+        question: "Do I have to attend an introductory class before Firm Foundation, Essential Strength and Active Mobility classes?",
+        answer: "Yes, you will have to attend at least 1 introductory class before signing up for the other classes, regardless if you have attended classes outside of am Pilates."
       },
       {
         question: "What is the maximum class size?",
-        answer: "Our classes are kept small to ensure personalized attention, with a maximum of 8 participants per reformer class. This allows our instructors to provide individual guidance and ensure proper form."
+        answer: "13 pax excluding instructor!"
       }
     ]
   }
@@ -158,23 +147,27 @@ export default function FAQ() {
 
       {/* FAQ Navigation */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
-        <div className="flex flex-wrap gap-2 md:gap-4 mb-8 md:mb-12 border-b border-gray-200">
-          {faqData.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => {
-                setActiveCategory(category.id);
-                setExpandedItems([]);
-              }}
-              className={`px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-medium rounded-t-lg transition-colors duration-200 border-b-2 ${
-                activeCategory === category.id
-                  ? 'text-[#80978b] border-[#80978b] bg-[#80978b]/5'
-                  : 'text-[#656565] border-transparent hover:text-[#80978b] hover:border-[#80978b]/50'
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
+        <div className="relative -mx-4 md:mx-0">
+          <div className="overflow-x-auto scrollbar-hide md:overflow-visible">
+            <div className="flex md:flex-wrap gap-2 md:gap-4 mb-8 md:mb-12 border-b border-gray-200 px-4 md:px-0 min-w-max md:min-w-0">
+              {faqData.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => {
+                    setActiveCategory(category.id);
+                    setExpandedItems([]);
+                  }}
+                  className={`px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-medium rounded-t-lg transition-colors duration-200 border-b-2 whitespace-nowrap ${
+                    activeCategory === category.id
+                      ? 'text-[#80978b] border-[#80978b] bg-[#80978b]/5'
+                      : 'text-[#656565] border-transparent hover:text-[#80978b] hover:border-[#80978b]/50'
+                  }`}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* FAQ Content */}
@@ -227,7 +220,7 @@ export default function FAQ() {
               </button>
               {expandedItems.includes(index) && (
                 <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                  <p className="text-[#656565] text-sm md:text-base leading-relaxed">
+                  <p className="text-[#656565] text-sm md:text-base leading-relaxed whitespace-pre-line">
                     {item.answer}
                   </p>
                 </div>
@@ -247,18 +240,18 @@ export default function FAQ() {
               fill
               className="object-cover opacity-30"
             />
-            <div className="relative z-10 flex flex-col md:flex-row mx-6 md:mx-16 items-center justify-center md:justify-between h-full text-white">
-              <div className="mb-6 md:mb-0">
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
+            <div className="relative z-10 flex flex-col md:flex-row mx-6 md:mx-16 items-center justify-center md:justify-between h-full text-center md:text-left text-white">
+              <div className="mb-4 md:mb-0">
+                <h2 className="font-serif text-[28px] md:text-4xl lg:text-5xl font-semibold mb-2 md:mb-4">
                   Still Have Questions?
                 </h2>
-                <p className="text-lg md:text-xl mb-6 md:mb-8">
+                <p className="text-[15px] md:text-xl mb-4 md:mb-8">
                   Get in touch with our team.
                   <br />
                   We're here to help you start your journey
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
+              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-8 md:py-3 rounded-full font-semibold">
                 Contact Us
               </button>
             </div>

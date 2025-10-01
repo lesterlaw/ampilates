@@ -29,7 +29,7 @@ export default function Promotions() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="w-full lg:w-1/2">
             <Image
-              src="/images/promotions-1.png"
+              src="/images/the-family-pass.webp"
               alt="The Family Pass Promotion"
               width={500}
               height={600}
@@ -78,7 +78,7 @@ export default function Promotions() {
         <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
           <div className="w-full lg:w-1/2">
             <Image
-              src="/images/promotions-2.png"
+              src="/images/refer-a-friend.webp"
               alt="Refer A Friend Studio"
               width={500}
               height={400}
@@ -124,7 +124,7 @@ export default function Promotions() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="w-full lg:w-1/2">
             <Image
-              src="/images/promotions-3.png"
+              src="/images/the-am-club.webp"
               alt="The am club merchandise"
               width={500}
               height={600}
@@ -133,57 +133,58 @@ export default function Promotions() {
           </div>
           <div className="w-full lg:w-1/2">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#232323] mb-6">
-              the am club
+              The am Club
             </h2>
             <p className="text-lg md:text-xl text-[#656565] mb-6 leading-relaxed">
-              Limited edition "am Club" cropped tee, available now at our studio!
+              Limited Edition "am Club" cropped tee, available now at our studio!
             </p>
-            <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-4">
-                <span className="text-base md:text-lg text-[#656565]">Original Price:</span>
-                <span className="text-base md:text-lg text-[#656565] line-through">$42.90</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-base md:text-lg text-[#656565]">Member Price:</span>
-                <span className="text-lg md:text-xl font-semibold text-[#80978b]">$38.90!</span>
-              </div>
-            </div>
+            <p className="text-lg md:text-xl text-[#656565] mb-6 leading-relaxed">
+              Snag the cute and limited edition "am Club" shirt available only at our studio, only at <span className="font-semiboldtext-base md:text-lg">$42.90</span>!
+            </p>
+            <p className="text-lg md:text-xl text-[#656565] mb-6 leading-relaxed">
+              Members, get it at a special price of <span className="text-xl md:text-2xl font-bold text-[#80978b]">$38.90</span>!
+            </p>
             <p className="text-base md:text-lg text-[#656565] leading-relaxed">
-              Don't wait - limited stock available and they're going fast!
+              Don't wait— limited stock available and they're going fast!
             </p>
           </div>
         </div>
       </section>
 
-      {/* Amore Section */}
+      {/* FullOut Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <Image
-                src="/images/promotions-4.png"
-                alt="Amore Define Logo"
-                width={500}
-                height={500}
-                className="w-auto h-auto object-contain"
-              />
-            </div>
+          <div className="w-full lg:w-1/2">
+            <Image
+              src="/images/fullout.webp"
+              alt="FullOut products"
+              width={500}
+              height={600}
+              className="w-full h-auto rounded-2xl object-cover"
+            />
           </div>
           <div className="w-full lg:w-1/2">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#232323] mb-6">
-              Amore
+              FullOut
             </h2>
-            <p className="text-lg md:text-xl text-[#656565] mb-6 font-semibold">
-              50% off à la carte services
+            <p className="text-lg md:text-xl text-[#656565] mb-6 leading-relaxed">
+              15% off FullOut’s products
             </p>
-            <div className="space-y-4 mb-8">
-              <p className="text-base md:text-lg text-[#656565] leading-relaxed">
-                The discount applies only to à la carte Define services and is non-transferable. Only for new to define members.
-              </p>
-              <p className="text-base md:text-lg text-[#656565] leading-relaxed">
-                Members must present an active membership shown on the app to redeem this discount at any Amore Define outlet.
-              </p>
-            </div>
+            <p className="text-base md:text-lg text-[#656565] mb-6 leading-relaxed">
+              Terms and Conditions: The discount applies to online purchases on{' '}
+              <a
+                href="https://fullout.cc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#80978b] underline hover:text-[#80978b]/80"
+              >
+                https://fullout.cc/
+              </a>
+            </p>
+            <p className="text-base md:text-lg text-[#656565] mb-6 leading-relaxed">
+              How to redeem? Apply discount code{' '}
+              <span className="font-semibold text-[#80978b]">(AM15)</span> when checking out.
+            </p>
           </div>
         </div>
       </section>

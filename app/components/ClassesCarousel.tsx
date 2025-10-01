@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import DifficultyIcon from "./DifficultyIcon";
 import { motion, useReducedMotion } from "framer-motion";
@@ -59,10 +59,24 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
   );
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      // Reset index when switching between mobile/desktop to prevent out of bounds
+      setCurrentIndex(0);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const total = classesData.length;
-  const visibleCount = 3; // Always show 3 cards
+  const visibleCount = isMobile ? 1 : 3;
   const canGoPrev = currentIndex > 0;
   const canGoNext = currentIndex < total - visibleCount;
 
@@ -113,18 +127,22 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden" aria-live="polite">
+      <div className="relative overflow-hidden -mx-4 md:mx-0" aria-live="polite">
         <motion.div
           className="flex transition-transform duration-500 ease-out"
           animate={{ 
-            x: prefersReducedMotion ? 0 : `calc(-${currentIndex * (100/3)}% - ${currentIndex * 2}rem)` 
+            x: prefersReducedMotion 
+              ? 0 
+              : isMobile 
+                ? `calc(-${currentIndex * 100}%)` 
+                : `calc(-${currentIndex * (100/3)}% - ${currentIndex * 2}rem)` 
           }}
           transition={{ duration: prefersReducedMotion ? 0 : 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           {classesData.map((item, idx) => (
             <div 
               key={`${item.title}-${idx}`} 
-              className="w-1/3 flex-shrink-0 px-3 md:px-4"
+              className="w-full md:w-1/3 flex-shrink-0 px-4 md:px-4"
               role="listitem"
             >
               <div className="rounded-lg overflow-hidden">
@@ -151,25 +169,42 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
         </motion.div>
       </div>
 
-      <div className="flex md:hidden items-center justify-center gap-3 mt-6">
-        <button
-          type="button"
-          onClick={handlePrev}
-          disabled={!canGoPrev}
-          aria-label="Previous classes"
-          className="h-10 w-10 rounded-full border border-[#94aa9f] text-[#80978b] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#f5f5f0] focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          onClick={handleNext}
-          disabled={!canGoNext}
-          aria-label="Next classes"
-          className="h-10 w-10 rounded-full border border-[#94aa9f] text-[#80978b] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#f5f5f0] focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
+      <div className="flex md:hidden flex-col items-center gap-4 mt-6">
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={handlePrev}
+            disabled={!canGoPrev}
+            aria-label="Previous classes"
+            className="h-10 w-10 rounded-full border border-[#94aa9f] text-[#80978b] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#f5f5f0] focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            onClick={handleNext}
+            disabled={!canGoNext}
+            aria-label="Next classes"
+            className="h-10 w-10 rounded-full border border-[#94aa9f] text-[#80978b] flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#f5f5f0] focus:outline-none focus:ring-2 focus:ring-[#80978b] focus:ring-offset-2"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+        <div className="flex items-center gap-2">
+          {classesData.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => setCurrentIndex(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                idx === currentIndex 
+                  ? 'w-8 bg-[#80978b]' 
+                  : 'w-2 bg-[#94aa9f]/40'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -3,21 +3,22 @@ import { ChevronDown } from "lucide-react";
 import DifficultyIcon from "./components/DifficultyIcon";
 import ClassesCarousel from "./components/ClassesCarousel";
 import FadeInOnView from "./components/FadeInOnView";
+import TestimonialsCarousel from "./components/TestimonialsCarousel";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
+      <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 pt-4 pb-8 md:py-16">
         <div className="text-center mb-8 md:mb-12">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-8xl font-semibold text-[#232323] leading-tight mb-6 md:mb-8">
+          <h1 className="font-serif text-[38px] md:text-6xl lg:text-8xl font-semibold text-[#232323] leading-tight mb-6 md:mb-8">
             Empowering you,
             <br />
             one movement at a time.
           </h1>
         </div>
 
-        <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
+        <div className="relative -mx-4 md:mx-0 rounded-none md:rounded-[60px] overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
           <Image
             src={"/images/homepage-banner.jpg"}
             alt="Pilates Studio Interior"
@@ -139,19 +140,19 @@ export default function Home() {
               fill
               className="object-cover opacity-30"
             />
-            <div className="relative z-10 flex flex-col md:flex-row mx-6 md:mx-16 items-center justify-center md:justify-between h-full text-center text-white">
-              <div className="mb-6 md:mb-0 text-left">
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
+            <div className="relative z-10 flex flex-col md:flex-row mx-6 md:mx-16 items-center justify-center md:justify-between h-full text-center md:text-left text-white">
+              <div className="mb-4 md:mb-0">
+                <h2 className="font-serif text-[28px] md:text-4xl lg:text-5xl font-semibold mb-2 md:mb-4">
                   First-Time Trial at $19!​
                 </h2>
-                <p className="text-[17px] md:text-[19px] mb-6 md:mb-8">
+                <p className="text-[15px] md:text-[19px] mb-4 md:mb-8">
                   Discover the strength, balance, and grace of Reformer Pilates
                   in a welcoming and empowering space.
                   <br />
                   Join us at am Pilates and experience the difference.​
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-8 md:px-12 py-3 rounded-full font-semibold whitespace-nowrap">
+              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-12 md:py-3 rounded-full font-semibold whitespace-nowrap">
                 Get Trial Now
               </button>
             </div>
@@ -181,58 +182,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className="bg-[#EFECE1] rounded-[30px] md:rounded-[50px] relative w-full flex h-[350px] md:h-[420px]"
-              >
-                <div>
-                  <div className="flex flex-col items-start justify-center px-4 md:px-8 gap-4 md:gap-6">
-                    <div className="p-4 md:p-8">
-                      <div className=" rounded-lg flex">
-                        <Image
-                          src="/images/quote.png"
-                          alt="Quote mark"
-                          width={50}
-                          height={50}
-                          className="w-[50px] h-[50px]"
-                        />
-                      </div>
-                    </div>
-                    <p className="text-[#232323] text-center text-base md:text-[20px] leading-6 md:leading-[30px] font-normal px-2 md:px-0">
-                      What a fun experience! Class was engaging and the
-                      instructors was so patient and helpful at correcting my
-                      posture.
-                    </p>
-                  </div>
-
-                  {/* Profile Section with Background */}
-                  <div className="absolute bottom-0 left-0 right-0 w-2/3">
-                    <div className="bg-[#fafaf5] rounded-tl-none rounded-tr-[20px] rounded-bl-[20px] rounded-br-none  ml-auto flex items-center px-6 py-4 space-x-3">
-                      <Image
-                        src="/images/testimonial.png"
-                        alt="Client"
-                        width={55}
-                        height={55}
-                        className="rounded-full w-[55px] h-[55px]"
-                      />
-                      <div>
-                        <p className="font-bold text-[#656565] text-[20px] leading-[23px] tracking-[0.01em]">
-                          Amelia Lenny
-                        </p>
-                        <p className="text-[#656565] text-[20px] leading-[23px] tracking-[0.01em] font-normal">
-                          35, Teacher
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <TestimonialsCarousel />
       </FadeInOnView>
 
       {/* Contact Section */}

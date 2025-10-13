@@ -22,6 +22,7 @@ export default function Home() {
                     <CustomVideoPlayer
                         src="/amore-video.mp4"
                         className="w-full h-full"
+                        autoPlay={true}
                     />
                 </div>
             </FadeInOnView>

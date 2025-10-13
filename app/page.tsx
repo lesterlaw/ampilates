@@ -17,16 +17,17 @@ export default function Home() {
             one movement at a time.
           </h1>
         </div>
-
-        <div className="relative -mx-4 md:mx-0 rounded-none md:rounded-[60px] overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
-          <Image
-            src={"/images/homepage-banner.jpg"}
-            alt="Pilates Studio Interior"
-            fill
-            className="object-cover"
-          />
-        </div>
       </FadeInOnView>
+
+      {/* Full Width Banner */}
+      <div className="relative w-full overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
+        <Image
+          src={"/images/homepage-banner.jpg"}
+          alt="Pilates Studio Interior"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       {/* About Section */}
       <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">

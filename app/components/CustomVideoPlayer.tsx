@@ -6,11 +6,12 @@ import { Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react";
 interface CustomVideoPlayerProps {
   src: string;
   className?: string;
+  autoPlay?: boolean;
 }
 
-const CustomVideoPlayer = ({ src, className = "" }: CustomVideoPlayerProps) => {
+const CustomVideoPlayer = ({ src, className = "", autoPlay = false }: CustomVideoPlayerProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [isMuted, setIsMuted] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -38,12 +39,19 @@ const CustomVideoPlayer = ({ src, className = "" }: CustomVideoPlayerProps) => {
     video.addEventListener("loadedmetadata", handleLoadedMetadata);
     video.addEventListener("ended", handleEnded);
 
+    // Auto play if enabled
+    if (autoPlay) {
+      video.play().catch((error) => {
+        console.log("Autoplay failed:", error);
+      });
+    }
+
     return () => {
       video.removeEventListener("timeupdate", handleTimeUpdate);
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
       video.removeEventListener("ended", handleEnded);
     };
-  }, []);
+  }, [autoPlay]);
 
   const handlePlayPause = () => {
     const video = videoRef.current;
@@ -140,6 +148,7 @@ const CustomVideoPlayer = ({ src, className = "" }: CustomVideoPlayerProps) => {
         loop
         muted
         playsInline
+        autoPlay={autoPlay}
         className="w-full h-full object-cover cursor-pointer"
         onClick={handlePlayPause}
       />

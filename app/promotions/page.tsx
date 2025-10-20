@@ -151,13 +151,13 @@ export default function Promotions() {
         </div>
       </section>
 
-      {/* FullOut Section */}
+      {/* Birthday Perks Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-center">
           <div className="w-full lg:w-1/2">
             <Image
-              src="/images/fullout.webp"
-              alt="FullOut products"
+              src="/images/birthday-perks.webp"
+              alt="Birthday Perks"
               width={500}
               height={600}
               className="w-full h-auto rounded-2xl object-cover"
@@ -165,26 +165,22 @@ export default function Promotions() {
           </div>
           <div className="w-full lg:w-1/2">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#232323] mb-6">
-              FullOut
+              Birthday Perks
             </h2>
             <p className="text-lg md:text-xl text-[#656565] mb-6 leading-relaxed">
-              15% off FullOut’s products
+              50% off à la carte services
             </p>
-            <p className="text-base md:text-lg text-[#656565] mb-6 leading-relaxed">
-              Terms and Conditions: The discount applies to online purchases on{' '}
-              <a
-                href="https://fullout.cc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#80978b] underline hover:text-[#80978b]/80"
-              >
-                https://fullout.cc/
-              </a>
-            </p>
-            <p className="text-base md:text-lg text-[#656565] mb-6 leading-relaxed">
-              How to redeem? Apply discount code{' '}
-              <span className="font-semibold text-[#80978b]">(AM15)</span> when checking out.
-            </p>
+            <div className="space-y-4 mb-8">
+              <p className="text-base md:text-lg text-[#656565] leading-relaxed">
+                The discount only applies to à la carte Define services and is non-transferable.
+              </p>
+              <p className="text-base md:text-lg text-[#656565] leading-relaxed">
+                Only for new to Define members.
+              </p>
+              <p className="text-base md:text-lg text-[#656565] leading-relaxed">
+                Members must present an active membership shown on the app to redeem this discount at any Amore Define outlets.
+              </p>
+            </div>
           </div>
         </div>
       </section>

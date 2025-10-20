@@ -43,9 +43,9 @@ const Header = () => {
 
   const getMobileNavItemClass = (path: string) => {
     if (pathname === path) {
-      return "text-[#80978b] font-bold font-display tracking-wider text-2xl py-4 border-b border-gray-200 block";
+      return "text-[#80978b] font-bold font-display tracking-wider text-lg py-3 border-b border-gray-200 block";
     }
-    return "text-[#232323] font-display tracking-wider hover:text-[#80978b] transition-colors text-2xl py-4 border-b border-gray-200 block";
+    return "text-[#232323] font-display tracking-wider hover:text-[#80978b] transition-colors text-lg py-3 border-b border-gray-200 block";
   };
 
   const toggleMenu = () => {
@@ -97,8 +97,8 @@ const Header = () => {
           <Link href="/promotions" className={getNavItemClass("/promotions")}>
             Promotions
           </Link>
-          <Link href="/birthday-perks" className={getNavItemClass("/birthday-perks")}>
-            Birthday Perks
+          <Link href="/partner-perks" className={getNavItemClass("/partner-perks")}>
+            Partner Perks
           </Link>
           <Link href="/contact" className={getNavItemClass("/contact")}>
             Contact Us
@@ -246,11 +246,11 @@ const Header = () => {
             Promotions
           </Link>
           <Link
-            href="/birthday-perks"
-            className={getMobileNavItemClass("/birthday-perks")}
+            href="/partner-perks"
+            className={getMobileNavItemClass("/partner-perks")}
             onClick={toggleMenu}
           >
-            Birthday Perks
+            Partner Perks
           </Link>
           <Link
             href="/contact"
@@ -297,7 +297,7 @@ const Header = () => {
               </svg>
             </a>
           </div>
-          <button className="w-full bg-[#80978b] text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-[#6b8276] transition-colors">
+          <button className="w-full bg-[#80978b] text-white px-6 py-3 rounded-full text-base font-medium hover:bg-[#6b8276] transition-colors">
             Download Our App
           </button>
         </div>

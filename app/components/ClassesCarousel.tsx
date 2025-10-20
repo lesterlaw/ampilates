@@ -77,8 +77,9 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
 
   const total = classesData.length;
   const visibleCount = isMobile ? 1 : 3;
+  const maxIndex = isMobile ? total - 1 : total - visibleCount;
   const canGoPrev = currentIndex > 0;
-  const canGoNext = currentIndex < total - visibleCount;
+  const canGoNext = currentIndex < maxIndex;
 
   const handlePrev = useCallback(() => {
     if (canGoPrev) {
@@ -151,7 +152,13 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
                   alt={item.imageAlt}
                   width={400}
                   height={300}
-                  className="w-full h-48 md:h-64 rounded-3xl object-cover"
+                  className={`w-full h-48 md:h-64 rounded-3xl object-cover ${
+                    item.title === "Firm Foundation" || 
+                    item.title === "Essential Strength" || 
+                    item.title === "Active Mobility"
+                      ? "object-[center_65%]"
+                      : ""
+                  }`}
                 />
                 <div className="py-4 md:py-6 px-2 md:px-3">
                   <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>

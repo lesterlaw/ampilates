@@ -354,7 +354,7 @@ export default function About() {
                 alt="Sarah Johnson"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-2xl"
+                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -372,7 +372,7 @@ export default function About() {
                 alt="Emily Chen"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-2xl"
+                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -389,7 +389,7 @@ export default function About() {
                 alt="Emily Chen"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-2xl"
+                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -407,7 +407,7 @@ export default function About() {
                 alt="Amanda Lee"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover rounded-2xl"
+                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">

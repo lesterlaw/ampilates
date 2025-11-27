@@ -50,9 +50,9 @@ export default function Classes() {
 
   const classesData = [
     {
-      title: "Introduction Class",
+      title: "Introductory Class",
       imageSrc: "/images/introduction-class.jpg",
-      imageAlt: "Introduction Class",
+      imageAlt: "Introductory Class",
       difficulty: 1,
       description: (
         <>
@@ -74,10 +74,10 @@ export default function Classes() {
       description: (
         <>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed mb-4 whitespace-pre-line">
-            Firm Foundation is designed to deepen your understanding of Pilates principles, refine technique, and strengthen movement patterns for better mobility and control. Building on the Introductory Class, it focuses on alignment, breath, core engagement, and precision.
+            Firm Foundation is designed to deepen your understanding of Pilates principles, refine technique, and strengthen movement patterns for better mobility and control. Building on the Introductory Class, it focuses on alignment, breath work, core engagement, and precision.
           </p>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-            This is a great class for all members looking to strengthen their Pilates fundamentals – whether you're just starting out or refining your technique for more advanced practice.
+            This is a great class for all members looking to strengthen their Pilates fundamentals – whether you're just starting out or refining your technique for a more advanced practice.
           </p>
         </>
       ),
@@ -93,7 +93,7 @@ export default function Classes() {
             Step up your Reformer Pilates journey!
           </p>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed mb-4 whitespace-pre-line">
-            Designed for those who've completed the Intro Class, this session focuses on building a strong, stable, and balanced body. You'll master foundational exercises that strengthen your core, shoulders, and hips—using safe, posture-friendly movements that leave you feeling confident and empowered.
+            Designed for those who have completed the Introductory or Firm Foundation classes, this session focuses on building a strong, stable and balanced body. You'll master foundational exercises that strengthen your core, shoulders, and hips—using safe, posture-friendly movements that leave you feeling confident and empowered.
           </p>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed">
             Perfect for anyone looking to boost strength, improve stability, and move better every day.
@@ -112,7 +112,7 @@ export default function Classes() {
             This class is designed to help members who aim to improve flexibility & mobility. The class covers both:
           </p>
           <ul className="list-disc text-sm md:text-base text-[#656565] leading-relaxed space-y-2 ml-4 mb-4">
-            <li>Passive flexibility to improve Range of Motion (ROM) to relieve muscles tension or stress, improve joint stability; and</li>
+            <li>Passive flexibility to improve Range of Motion (ROM) to relieve muscle tension or stress, improve joint stability; and</li>
             <li>Active mobility to develop eccentric control of muscles especially at end range for injury prevention and optimise functional mobility for everyday activities.</li>
           </ul>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed">

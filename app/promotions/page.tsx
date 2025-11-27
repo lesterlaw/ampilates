@@ -29,7 +29,7 @@ export default async function Promotions() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
         <div className="text-center mb-8 md:mb-12">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-[#232323] leading-tight mb-6 md:mb-8">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-[#80978b] leading-tight mb-6 md:mb-8">
             Our Promotions
           </h1>
           <p className="text-lg md:text-xl text-[#656565] max-w-4xl mx-auto leading-relaxed px-4 md:px-0">

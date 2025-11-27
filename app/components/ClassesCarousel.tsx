@@ -23,9 +23,9 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
   const classesData: ClassCard[] = useMemo(
     () => [
       {
-        title: "Introduction Class",
+        title: "Introductory Class",
         imageSrc: "/images/introduction-class.jpg",
-        imageAlt: "Introduction Class",
+        imageAlt: "Introductory Class",
         difficulty: 1,
         description:
           "Never Tried Reformer Pilates before? This Introductory Class is the perfect first step. You'll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we'll guide you through body alignment basics to help you move with confidence and ease.",

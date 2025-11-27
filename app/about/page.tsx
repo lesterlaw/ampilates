@@ -62,7 +62,7 @@ export default function About() {
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
               Our certified instructors bring years of experience and passion to
-              every class, ensuring you receive personalized attention and
+              every class, ensuring you receive personalised attention and
               proper guidance.
             </p>
           </div>
@@ -115,7 +115,7 @@ export default function About() {
               Your body, your ability, our passion.
             </h2>
             <p className="text-[#6a6a6a] text-base md:text-lg">
-              Do pilates with us and discover the benefits of reformer pilates
+              Discover the transformative power of Reformer Pilates with us
             </p>
           </div>
 
@@ -201,15 +201,23 @@ export default function About() {
             <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
               Jurong CPF Building
             </h3>
-            <p className="text-sm md:text-base text-[#656565] mb-4">
+            <a
+              href="https://www.google.com/maps/place/am+Pilates/@1.3349364,103.7349031,17z/data=!3m2!4b1!5s0x31da10053b0f374f:0x5256d6d8579e7bdf!4m6!3m5!1s0x31da114045a14cd1:0x91c6224e6f3e05af!8m2!3d1.334931!4d103.7397794!16s%2Fg%2F11y4_qv17y?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm md:text-base text-[#656565] mb-4 hover:text-[#80978b] transition-colors cursor-pointer block"
+            >
               21 Jurong Gateway Rd
               <br />
               #03-08 Entrance C, CPF Building
               <br />
               Singapore 608546
-            </p>
+            </a>
             <p className="text-[#656565] text-xs md:text-sm flex flex-col gap-2">
-              <span className="flex items-center gap-2">
+              <a
+                href="mailto:hello@ampilates.sg"
+                className="flex items-center gap-2 hover:text-[#80978b] transition-colors cursor-pointer"
+              >
                 <svg
                   className="w-4 h-4 text-[#656565]"
                   viewBox="0 0 24 24"
@@ -218,8 +226,11 @@ export default function About() {
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
                 hello@ampilates.sg
-              </span>
-              <span className="flex items-center gap-2">
+              </a>
+              <a
+                href="tel:+6596934753"
+                className="flex items-center gap-2 hover:text-[#80978b] transition-colors cursor-pointer"
+              >
                 <svg
                   className="w-4 h-4 text-[#656565]"
                   viewBox="0 0 24 24"
@@ -228,7 +239,7 @@ export default function About() {
                   <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7z" />
                 </svg>
                 (65) 9693-4753
-              </span>
+              </a>
             </p>
           </div>
 
@@ -243,15 +254,23 @@ export default function About() {
             <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
               TOWER 88 PUNGGOL WAY
             </h3>
-            <p className="text-sm md:text-base text-[#656565] mb-4">
+            <a
+              href="https://www.google.com/maps/place/am+Pilates+Punggol+Coast+Mall/@1.4155876,103.9078964,17z/data=!3m1!4b1!4m6!3m5!1s0x31da1545e1425bd1:0x1253a705f59dbf28!8m2!3d1.4155822!4d103.9104767!16s%2Fg%2F11yds3c6xr?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm md:text-base text-[#656565] mb-4 hover:text-[#80978b] transition-colors cursor-pointer block"
+            >
               Punggol Coast Mall (via Lobby D)
               <br />
               #12-111
               <br />
               Singapore 829913
-            </p>
+            </a>
             <p className="text-[#656565] text-xs md:text-sm flex flex-col gap-2">
-              <span className="flex items-center gap-2">
+              <a
+                href="mailto:hello@ampilates.sg"
+                className="flex items-center gap-2 hover:text-[#80978b] transition-colors cursor-pointer"
+              >
                 <svg
                   className="w-4 h-4 text-[#656565]"
                   viewBox="0 0 24 24"
@@ -260,8 +279,11 @@ export default function About() {
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
                 hello@ampilates.sg
-              </span>
-              <span className="flex items-center gap-2">
+              </a>
+              <a
+                href="tel:+6583335316"
+                className="flex items-center gap-2 hover:text-[#80978b] transition-colors cursor-pointer"
+              >
                 <svg
                   className="w-4 h-4 text-[#656565]"
                   viewBox="0 0 24 24"
@@ -270,7 +292,7 @@ export default function About() {
                   <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7z" />
                 </svg>
                 (65) 8333-5316
-              </span>
+              </a>
             </p>
           </div>
         </div>
@@ -282,7 +304,7 @@ export default function About() {
           Our Amenities
         </h2>
         <p className="text-white text-base md:text-lg mb-8 md:mb-12 text-center">
-          Each of our studios comes with the following amenities:
+          Our studios offer the following amenities for your comfort and convenience:
         </p>
 
         <div className="flex flex-col items-center gap-6">
@@ -342,8 +364,7 @@ export default function About() {
           Our Team
         </h2>
         <p className="text-base md:text-lg text-[#656565] mb-6 md:mb-8">
-          Our instructors who will help and guide you. Join us today and join
-          our community.
+          Our dedicated instructors will guide you every step of the way. Join us today and be part of our community.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

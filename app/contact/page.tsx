@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Mail, Phone, ChevronDown } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
@@ -62,48 +63,7 @@ export default function Contact() {
             Have a question / enquiry? Reach out to us!
           </p>
 
-          <form className="max-w-4xl mx-auto space-y-4 md:space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full p-3 md:p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-3 md:p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full p-4 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b]"
-            />
-            <div>
-              <label className="block text-[#656565] text-sm md:text-base mb-2">Location</label>
-              <div className="relative">
-                <select className="w-full p-3 md:p-4 pr-10 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base appearance-none">
-                  <option>Jurong CPF</option>
-                  <option>Punggol Coast Mall</option>
-                </select>
-                <ChevronDown className="pointer-events-none absolute right-4 md:right-5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#656565]" />
-              </div>
-            </div>
-            <textarea
-              placeholder="Your message"
-              rows={6}
-              className="w-full p-3 md:p-4 rounded-[20px] md:rounded-[30px] bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] resize-none text-sm md:text-base"
-            />
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-[#80978b] cursor-pointer hover:bg-[#6b8276] text-white px-6 md:px-8 py-3 rounded-full font-bold text-sm md:text-base"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 type FAQItem = {
@@ -50,7 +51,7 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Can I transfer my membership account to another holder?",
-        answer: "No, all packages are intended for the recipient who purchased them and are nontransferable."
+        answer: "No, all packages are intended for the recipient who purchased them and are non-transferable."
       },
       {
         question: "When does my class/package become active? Does it have an expiry date?",
@@ -58,7 +59,7 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Can I extend the expiration date of my classes or package?",
-        answer: "Please contact our studio for extension options. Extensions are granted on a case-bycase basis and may require an additional fee."
+        answer: "Please contact our studio for extension options. Extensions are granted on a case-by-case basis and may require an additional fee."
       }
     ]
   },
@@ -107,7 +108,7 @@ const faqData: FAQCategory[] = [
 ];
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState("packages");
+  const [activeCategory, setActiveCategory] = useState("general");
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
 
   const handleToggleExpand = (index: number) => {
@@ -118,7 +119,7 @@ export default function FAQ() {
     );
   };
 
-  const activeData = faqData.find(category => category.id === activeCategory) || faqData[1];
+  const activeData = faqData.find(category => category.id === activeCategory) || faqData[0];
 
   return (
     <>
@@ -251,9 +252,12 @@ export default function FAQ() {
                   We're here to help you start your journey
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-8 md:py-3 rounded-full font-semibold">
+              <Link 
+                href="/contact"
+                className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-8 md:py-3 rounded-full font-semibold inline-block"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>

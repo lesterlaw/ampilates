@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getPromotions } from "@/app/actions/promotions";
 
+export const dynamic = 'force-dynamic';
+
 const renderFeature = (feature: string, index: number, isNumbered: boolean = false) => {
   if (isNumbered) {
     return (

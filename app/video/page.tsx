@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="relative max-w-7xl mx-auto px-4 md:px-0">
                     <div className="relative h-80 md:h-72 bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
                         <Image
-                            src={"/images/free-trial.png"}
+                            src={"/images/first-time-trial.jpg"}
                             alt="Free Trial Background"
                             fill
                             className="object-cover opacity-30"

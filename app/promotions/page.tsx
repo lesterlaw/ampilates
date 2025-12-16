@@ -39,12 +39,13 @@ export default async function Promotions() {
           </p>
         </div>
 
-        <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden h-[300px] md:h-[500px] mb-8 md:mb-16">
+        <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden mb-8 md:mb-16">
           <Image
-            src={"/images/pilates-hero.png"}
-            alt="am Pilates Studio Interior"
-            fill
-            className="object-cover"
+            src={"/images/promotions-header.png"}
+            alt="am Pilates Promotions"
+            width={1200}
+            height={800}
+            className="w-full h-auto object-contain"
           />
         </div>
       </section>
@@ -99,8 +100,8 @@ export default async function Promotions() {
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
           <div className="relative h-80 md:h-72 bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
-              src={"/images/free-trial.png"}
-              alt="Join us background"
+              src={"/images/ready-to-join.jpg"}
+              alt="Ready to Join Background"
               fill
               className="object-cover opacity-30"
             />

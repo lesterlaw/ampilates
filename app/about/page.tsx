@@ -21,8 +21,8 @@ export default function About() {
             </p>
           </div>
           <Image
-            src="/images/header.png"
-            alt="About Hero"
+            src="/images/about-am.jpg"
+            alt="About am Pilates"
             width={400}
             height={400}
             className="w-full h-full object-cover rounded-4xl"
@@ -246,7 +246,7 @@ export default function About() {
           <div className="">
             <Image
               src={"/images/punggol-outlet.jpg"}
-              alt="Private Studio"
+              alt="Punggol Coast Mall Studio"
               width={500}
               height={300}
               className="w-full h-48 md:h-72 object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
@@ -446,7 +446,7 @@ export default function About() {
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
           <div className="relative h-80 md:h-72 bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
-              src={"/images/free-trial.png"}
+              src={"/images/first-time-trial.jpg"}
               alt="Free Trial Background"
               fill
               className="object-cover opacity-30"

@@ -40,13 +40,13 @@ export default function Contact() {
             </div>
           </div>
           
-          <div className="relative">
+          <div className="relative md:rounded-[30px] rounded-4xl overflow-hidden">
             <Image
-              src="/images/header.png"
-              alt="am Pilates Studio Reception"
+              src="/images/contact-us-image.jpg"
+              alt="am Pilates Studio"
               width={650}
-              height={470}
-              className="w-full h-auto md:rounded-[30px] object-cover rounded-4xl"
+              height={800}
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>

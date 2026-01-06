@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ClassesCarousel from "../components/ClassesCarousel";
+import FadeInOnView from "../components/FadeInOnView";
 
 export default function About() {
   return (
@@ -21,7 +23,7 @@ export default function About() {
             </p>
           </div>
           <Image
-            src="/images/about-am.jpg"
+            src="/images/newAboutus.png"
             alt="About am Pilates"
             width={400}
             height={400}
@@ -122,7 +124,7 @@ export default function About() {
           <div className="flex justify-center mb-6 md:mb-8">
             <div className="relative w-full max-w-2xl md:max-w-4xl">
               <Image
-                src="/images/pilates-benefit.png"
+                src="/images/newnewpilates.png"
                 alt="Benefits"
                 width={800}
                 height={800}
@@ -440,6 +442,14 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Classes Section */}
+      <FadeInOnView>
+        <ClassesCarousel
+          heading="Our Classes"
+          intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​"
+        />
+      </FadeInOnView>
 
       {/* Free Trial CTA */}
       <section className="relative">

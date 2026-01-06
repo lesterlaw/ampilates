@@ -4,6 +4,7 @@ import ClassesCarousel from "./components/ClassesCarousel";
 import FadeInOnView from "./components/FadeInOnView";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import ContactForm from "./components/ContactForm";
+import HomeBannerCarousel from "./components/HomeBannerCarousel";
 
 export default function Home() {
   return (
@@ -19,15 +20,8 @@ export default function Home() {
         </div>
       </FadeInOnView>
 
-      {/* Full Width Banner */}
-      <div className="relative w-full overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16">
-        <Image
-          src={"/images/homepage-banner.jpg"}
-          alt="Pilates Studio Interior"
-          fill
-          className="object-cover"
-        />
-      </div>
+      {/* Full Width Banner Carousel */}
+      <HomeBannerCarousel />
 
       {/* About Section */}
       <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
@@ -134,7 +128,7 @@ export default function Home() {
       {/* Free Trial CTA */}
       <FadeInOnView as="section" className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-80 md:h-72 bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative h-[512px] md:h-[461px] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/first-time-trial.jpg"}
               alt="Free Trial Background"

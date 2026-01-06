@@ -87,9 +87,13 @@ const TrialClassPage = () => {
           {/* Guidance */}
           <div className="bg-primary/10 rounded-2xl p-8 space-y-6">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7H16c-.8 0-1.5.7-1.5 1.5v6c0 .8.7 1.5 1.5 1.5h1v6h3zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-6H9V9.5C9 8.12 7.88 7 6.5 7S4 8.12 4 9.5V16h1.5v6h2z"/>
-              </svg>
+              <Image
+                src="/images/guidance.png"
+                alt="Guidance"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-3">
@@ -104,9 +108,13 @@ const TrialClassPage = () => {
           {/* Full-Body Workout */}
           <div className="bg-primary/10 rounded-2xl p-8 space-y-6">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/>
-              </svg>
+              <Image
+                src="/images/fullbody.png"
+                alt="Full-Body Workout"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-3">

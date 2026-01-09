@@ -4,6 +4,7 @@ import DifficultyIcon from "../components/DifficultyIcon";
 import ClassesCarousel from "../components/ClassesCarousel";
 import FadeInOnView from "../components/FadeInOnView";
 import CustomVideoPlayer from "../components/CustomVideoPlayer";
+import GetTrialNowButton from "../components/GetTrialNowButton";
 
 export default function Home() {
     return (
@@ -151,9 +152,7 @@ export default function Home() {
                                     Join us at am Pilates and experience the difference.
                                 </p>
                             </div>
-                            <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-8 md:px-12 py-3 rounded-full font-semibold whitespace-nowrap">
-                                Get Trial Now
-                            </button>
+                            <GetTrialNowButton className="px-8 md:px-12 py-3" />
                         </div>
                     </div>
                 </div>

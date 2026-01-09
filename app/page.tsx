@@ -5,6 +5,7 @@ import FadeInOnView from "./components/FadeInOnView";
 import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import ContactForm from "./components/ContactForm";
 import HomeBannerCarousel from "./components/HomeBannerCarousel";
+import GetTrialNowButton from "./components/GetTrialNowButton";
 
 export default function Home() {
   return (
@@ -128,7 +129,7 @@ export default function Home() {
       {/* Free Trial CTA */}
       <FadeInOnView as="section" className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-[512px] md:h-[461px] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative aspect-[4/5] md:aspect-[16/6] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/first-time-trial.jpg"}
               alt="Free Trial Background"
@@ -147,9 +148,7 @@ export default function Home() {
                   Join us at am Pilates and experience the difference.​
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-12 md:py-3 rounded-full font-semibold whitespace-nowrap">
-                Get Trial Now
-              </button>
+              <GetTrialNowButton />
             </div>
           </div>
         </div>

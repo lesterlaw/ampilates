@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppContact from "./components/WhatsAppContact";
+import { WhatsAppProvider } from "./contexts/WhatsAppContext";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -35,12 +36,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${lexend.variable} antialiased`}
       >
-        <div className="min-h-screen bg-[#fafaf5]">
-          <Header />
-          {children}
-          <Footer />
-          <WhatsAppContact />
-        </div>
+        <WhatsAppProvider>
+          <div className="min-h-screen bg-[#fafaf5]">
+            <Header />
+            {children}
+            <Footer />
+            <WhatsAppContact />
+          </div>
+        </WhatsAppProvider>
       </body>
     </html>
   );

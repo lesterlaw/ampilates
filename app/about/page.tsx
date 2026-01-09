@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ClassesCarousel from "../components/ClassesCarousel";
 import FadeInOnView from "../components/FadeInOnView";
+import BookNowButton from "../components/BookNowButton";
+import GetTrialNowButton from "../components/GetTrialNowButton";
 
 export default function About() {
   return (
@@ -23,7 +25,7 @@ export default function About() {
             </p>
           </div>
           <Image
-            src="/images/newAboutus.png"
+            src="/images/welcometopilates.png"
             alt="About am Pilates"
             width={400}
             height={400}
@@ -52,7 +54,7 @@ export default function About() {
           <div className="text-center">
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <Image
-                src="/images/ladies-exclusive.png"
+                src="/images/expertinstructor.png"
                 alt="Expert Instruction"
                 width={64}
                 height={64}
@@ -114,11 +116,8 @@ export default function About() {
         <div className="bg-[#E4E8E2] rounded-[20px] md:rounded-[30px] p-6 md:p-12">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#4a4a4a] mb-4">
-              Your body, your ability, our passion.
-            </h2>
-            <p className="text-[#6a6a6a] text-base md:text-lg">
               Discover the transformative power of Reformer Pilates with us
-            </p>
+            </h2>
           </div>
 
           <div className="flex justify-center mb-6 md:mb-8">
@@ -172,9 +171,7 @@ export default function About() {
           </div>
 
           <div className="text-center">
-            <button className="bg-[#80978b] hover:bg-[#6d8076] text-white px-8 py-3 rounded-full font-semibold transition-colors duration-200">
-              Book Now
-            </button>
+            <BookNowButton />
           </div>
         </div>
       </section>
@@ -198,7 +195,7 @@ export default function About() {
               alt="Studio Interior"
               width={500}
               height={300}
-              className="w-full h-48 md:h-72 object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
+              className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
             <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
               Jurong CPF Building
@@ -251,7 +248,7 @@ export default function About() {
               alt="Punggol Coast Mall Studio"
               width={500}
               height={300}
-              className="w-full h-48 md:h-72 object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
+              className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
             <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
               TOWER 88 PUNGGOL WAY
@@ -377,7 +374,7 @@ export default function About() {
                 alt="Sarah Johnson"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
+                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -395,7 +392,7 @@ export default function About() {
                 alt="Emily Chen"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
+                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -412,7 +409,7 @@ export default function About() {
                 alt="Emily Chen"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
+                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -430,7 +427,7 @@ export default function About() {
                 alt="Amanda Lee"
                 width={300}
                 height={400}
-                className="w-full h-48 md:h-56 object-cover object-[center_65%] rounded-2xl"
+                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
               />
               {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
                 <h3 className="font-display text-lg font-bold text-white mb-1">
@@ -454,7 +451,7 @@ export default function About() {
       {/* Free Trial CTA */}
       <section className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-80 md:h-72 bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative aspect-[16/14] md:aspect-[16/4] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/first-time-trial.jpg"}
               alt="Free Trial Background"
@@ -472,9 +469,7 @@ export default function About() {
                   Join us at am Pilates and experience the difference.​
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-8 md:px-12 py-3 rounded-full font-semibold whitespace-nowrap">
-                Get Trial Now
-              </button>
+              <GetTrialNowButton className="px-8 md:px-12 py-3" />
             </div>
           </div>
         </div>

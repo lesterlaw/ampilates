@@ -5,11 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import DownloadAppModal from "./DownloadAppModal";
 
 const Header = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -142,7 +144,10 @@ const Header = () => {
               </svg>
             </a>
           </div>
-          <button className="bg-[#80978b] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#6b8276] transition-colors">
+          <button 
+            onClick={() => setIsDownloadModalOpen(true)}
+            className="bg-[#80978b] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#6b8276] transition-colors"
+          >
             Download Our App
           </button>
         </div>
@@ -297,11 +302,23 @@ const Header = () => {
               </svg>
             </a>
           </div>
-          <button className="w-full bg-[#80978b] text-white px-6 py-3 rounded-full text-base font-medium hover:bg-[#6b8276] transition-colors">
+          <button 
+            onClick={() => {
+              setIsDownloadModalOpen(true);
+              setIsMenuOpen(false);
+            }}
+            className="w-full bg-[#80978b] text-white px-6 py-3 rounded-full text-base font-medium hover:bg-[#6b8276] transition-colors"
+          >
             Download Our App
           </button>
         </div>
       </div>
+
+      {/* Download App Modal */}
+      <DownloadAppModal 
+        isOpen={isDownloadModalOpen} 
+        onClose={() => setIsDownloadModalOpen(false)} 
+      />
     </>
   );
 };

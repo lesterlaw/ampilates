@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MapPin, Phone } from "lucide-react";
+import { useWhatsApp } from "../contexts/WhatsAppContext";
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ size = 24, className = "" }: { size?: number; className?: string }) => (
@@ -18,7 +18,7 @@ const WhatsAppIcon = ({ size = 24, className = "" }: { size?: number; className?
 );
 
 export default function WhatsAppContact() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isModalOpen, openModal, closeModal } = useWhatsApp();
 
   const modalVariants = {
     hidden: {
@@ -97,7 +97,7 @@ export default function WhatsAppContact() {
         }}
       >
         <motion.button
-          onClick={() => setIsModalOpen(true)}
+          onClick={openModal}
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group relative"
           variants={buttonVariants}
           whileHover="hover"
@@ -135,7 +135,7 @@ export default function WhatsAppContact() {
             {/* Backdrop */}
             <motion.div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={() => setIsModalOpen(false)}
+              onClick={closeModal}
               variants={backdropVariants}
               initial="hidden"
               animate="visible"
@@ -153,7 +153,7 @@ export default function WhatsAppContact() {
               {/* Header */}
               <div className="bg-[#80978b] text-white p-6 relative">
                 <motion.button
-                  onClick={() => setIsModalOpen(false)}
+                  onClick={closeModal}
                   className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}

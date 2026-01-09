@@ -1,12 +1,15 @@
 "use client"
 import Image from "next/image";
 import DifficultyIcon from "../components/DifficultyIcon";
-import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+import GetTrialNowButton from "../components/GetTrialNowButton";
+import { useWhatsApp } from "../contexts/WhatsAppContext";
 
 export default function Classes() {
+  const { openModal } = useWhatsApp();
+
   const trialClasses = [
     {
       title: "1 Pass",
@@ -68,7 +71,7 @@ export default function Classes() {
     },
     {
       title: "Firm Foundation",
-      imageSrc: "/images/firm-foundation.jpg",
+      imageSrc: "/images/firmfoundationcropped.png",
       imageAlt: "Firm Foundation",
       difficulty: 2,
       description: (
@@ -84,7 +87,7 @@ export default function Classes() {
     },
     {
       title: "Essential Strength",
-      imageSrc: "/images/essential-strength.jpg",
+      imageSrc: "/images/essentialstrengthcropped.png",
       imageAlt: "Essential Strength Flexibility",
       difficulty: 3,
       description: (
@@ -103,7 +106,7 @@ export default function Classes() {
     },
     {
       title: "Active Mobility",
-      imageSrc: "/images/active-mobility.jpg",
+      imageSrc: "/images/activemobilitycropped.png",
       imageAlt: "Active Mobility",
       difficulty: 3,
       description: (
@@ -217,13 +220,7 @@ export default function Classes() {
                     alt={item.imageAlt}
                     width={400}
                     height={300}
-                    className={`w-full h-48 md:h-64 rounded-3xl object-cover ${
-                      item.title === "Firm Foundation" || 
-                      item.title === "Essential Strength" || 
-                      item.title === "Active Mobility"
-                        ? "object-[center_65%]"
-                        : ""
-                    }`}
+                    className="w-full h-48 md:h-64 rounded-3xl object-cover"
                   />
                   <div className="py-4 md:py-6 px-2 md:px-3">
                     <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>
@@ -281,7 +278,10 @@ export default function Classes() {
         </div>
 
         <div className="text-center mt-8 md:mt-12">
-          <button className="bg-[#80978b] text-white px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg">
+          <button 
+            onClick={openModal}
+            className="bg-[#80978b] text-white px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:bg-[#6d8076] transition-colors duration-200"
+          >
             Book Now
           </button>
         </div>
@@ -317,11 +317,12 @@ export default function Classes() {
                     <p className="text-xl md:text-2xl font-bold">
                       {pass.price}
                     </p>
-                    <Link href="/trial">
-                      <button className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm">
-                        Purchase Now
-                      </button>
-                    </Link>
+                    <button 
+                      onClick={openModal}
+                      className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm hover:bg-[#7a8f84] transition-colors duration-200"
+                    >
+                      Purchase Now
+                    </button>
                   </div>
                 </div>
               ))}
@@ -355,11 +356,12 @@ export default function Classes() {
                     <p className="text-xl md:text-2xl font-bold">
                       {pass.price}
                     </p>
-                    <Link href="/trial">
-                      <button className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm">
-                        Purchase Now
-                      </button>
-                    </Link>
+                    <button 
+                      onClick={openModal}
+                      className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm hover:bg-[#7a8f84] transition-colors duration-200"
+                    >
+                      Purchase Now
+                    </button>
                   </div>
                 </div>
               ))}
@@ -371,7 +373,7 @@ export default function Classes() {
       {/* Free Trial CTA */}
       <section className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-[512px] md:h-[461px] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative aspect-[4/5] md:aspect-[16/6] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/first-time-trial.jpg"}
               alt="Free Trial Background"
@@ -389,11 +391,7 @@ export default function Classes() {
                   Join us at am Pilates and experience the difference.​
                 </p>
               </div>
-              <Link href="/trial">
-                <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-12 md:py-3 rounded-full font-semibold whitespace-nowrap">
-                  Get Trial Now
-                </button>
-              </Link>
+              <GetTrialNowButton />
             </div>
           </div>
         </div>

@@ -12,6 +12,10 @@ type CarouselImage = {
 
 const carouselImages: CarouselImage[] = [
   {
+    src: "/images/Carousell Solo.jpg",
+    alt: "Solo Pilates Session",
+  },
+  {
     src: "/images/Carousell (duo).jpg",
     alt: "Pilates Duo Class",
   },
@@ -22,10 +26,6 @@ const carouselImages: CarouselImage[] = [
   {
     src: "/images/Carousell (PC).jpg",
     alt: "Pilates Class at Punggol Coast",
-  },
-  {
-    src: "/images/Carousell Solo.jpg",
-    alt: "Solo Pilates Session",
   },
 ];
 
@@ -63,7 +63,7 @@ const HomeBannerCarousel = () => {
 
   return (
     <div
-      className="relative w-full overflow-hidden h-[300px] md:h-[600px] mb-8 md:mb-16"
+      className="relative w-full overflow-hidden aspect-[16/10] md:aspect-[21/9] mb-8 md:mb-16"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

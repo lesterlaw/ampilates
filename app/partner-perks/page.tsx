@@ -16,7 +16,7 @@ export default function PartnerPerks() {
 
         <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden mb-8 md:mb-16">
           <Image
-            src={"/images/promotions-header.png"}
+            src={"/images/partnerperks.jpg"}
             alt="am Pilates Partner Perks"
             width={1200}
             height={800}
@@ -66,7 +66,7 @@ export default function PartnerPerks() {
       {/* CTA Section */}
       <section className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-[512px] md:h-[461px] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative aspect-[4/5] md:aspect-[16/6] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/ready-to-join.jpg"}
               alt="Ready to Join Background"

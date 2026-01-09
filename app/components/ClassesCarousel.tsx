@@ -32,7 +32,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
       },
       {
         title: "Firm Foundation",
-        imageSrc: "/images/firm-foundation.jpg",
+        imageSrc: "/images/firmfoundationcropped.png",
         imageAlt: "Firm Foundation",
         difficulty: 2,
         description:
@@ -40,7 +40,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
       },
       {
         title: "Essential Strength",
-        imageSrc: "/images/essential-strength.jpg",
+        imageSrc: "/images/essentialstrengthcropped.png",
         imageAlt: "Essential Strength Flexibility",
         difficulty: 3,
         description:
@@ -48,7 +48,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
       },
       {
         title: "Active Mobility",
-        imageSrc: "/images/active-mobility.jpg",
+        imageSrc: "/images/activemobilitycropped.png",
         imageAlt: "Active Mobility",
         difficulty: 3,
         description:
@@ -152,13 +152,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
                   alt={item.imageAlt}
                   width={400}
                   height={300}
-                  className={`w-full h-48 md:h-64 rounded-3xl object-cover ${
-                    item.title === "Firm Foundation" || 
-                    item.title === "Essential Strength" || 
-                    item.title === "Active Mobility"
-                      ? "object-[center_65%]"
-                      : ""
-                  }`}
+                  className="w-full aspect-[4/3] rounded-3xl object-cover"
                 />
                 <div className="py-4 md:py-6 px-2 md:px-3">
                   <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>

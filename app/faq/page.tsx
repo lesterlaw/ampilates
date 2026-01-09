@@ -135,7 +135,7 @@ export default function FAQ() {
           </div>
           <div className="w-full  flex justify-center">
             <Image
-              src="/images/header.png"
+              src="/images/newfaq.png"
               alt="FAQ Hero"
               width={400}
               height={400}
@@ -233,7 +233,7 @@ export default function FAQ() {
       {/* Free Trial CTA */}
       <section className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-[512px] md:h-[461px] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative aspect-[4/5] md:aspect-[16/6] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/still-have-questions.jpg"}
               alt="Still Have Questions Background"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getPromotions } from "@/app/actions/promotions";
+import GetStartedButton from "../components/GetStartedButton";
 
 export const dynamic = 'force-dynamic';
 
@@ -41,7 +42,7 @@ export default async function Promotions() {
 
         <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden mb-8 md:mb-16">
           <Image
-            src={"/images/promotions-header.png"}
+            src={"/images/partnerperks.jpg"}
             alt="am Pilates Promotions"
             width={1200}
             height={800}
@@ -98,7 +99,7 @@ export default async function Promotions() {
       {/* CTA Section */}
       <section className="relative">
         <div className="relative max-w-7xl mx-auto px-4 md:px-0">
-          <div className="relative h-[512px] md:h-[461px] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
+          <div className="relative aspect-[4/5] md:aspect-[16/6] bg-[#80978b]/90 rounded-[30px] md:rounded-[50px] overflow-hidden">
             <Image
               src={"/images/ready-to-join.jpg"}
               alt="Ready to Join Background"
@@ -116,9 +117,7 @@ export default async function Promotions() {
                   these exclusive promotions
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
-                Get Started
-              </button>
+              <GetStartedButton />
             </div>
           </div>
         </div>

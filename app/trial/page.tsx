@@ -1,6 +1,20 @@
+"use client";
+
+import { useState } from 'react';
 import Image from 'next/image';
+import { useWhatsApp } from '../contexts/WhatsAppContext';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 const TrialClassPage = () => {
+  const { openModal } = useWhatsApp();
+  const [showTnC, setShowTnC] = useState(false);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -29,12 +43,18 @@ const TrialClassPage = () => {
               <p className="text-lg text-foreground">
                 What to Bring: Bring Grip Socks
               </p>
-              <p className="text-lg text-foreground underline">
+              <button 
+                onClick={() => setShowTnC(true)}
+                className="text-lg text-foreground underline hover:text-primary transition-colors cursor-pointer text-left"
+              >
                 T&Cs apply.
-              </p>
+              </button>
             </div>
 
-            <button className="bg-primary text-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-primary/90 transition-colors">
+            <button 
+              onClick={openModal}
+              className="bg-primary text-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-primary/90 transition-colors"
+            >
               Book Now
             </button>
           </div>
@@ -43,11 +63,11 @@ const TrialClassPage = () => {
           <div className="relative">
             <div className="rounded-[30px] overflow-hidden">
               <Image
-                src="/images/pilates-hero.png"
+                src="/images/trial.png"
                 alt="Pilates Studio"
                 width={645}
                 height={694}
-                className="w-full h-96 object-cover"
+                className="w-full h-[500px] object-cover object-top"
                 priority
               />
             </div>
@@ -90,9 +110,9 @@ const TrialClassPage = () => {
               <Image
                 src="/images/guidance.png"
                 alt="Guidance"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain"
               />
             </div>
             <div>
@@ -107,13 +127,13 @@ const TrialClassPage = () => {
 
           {/* Full-Body Workout */}
           <div className="bg-primary/10 rounded-2xl p-8 space-y-6">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center overflow-hidden">
               <Image
                 src="/images/fullbody.png"
                 alt="Full-Body Workout"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain rounded-full"
               />
             </div>
             <div>
@@ -244,6 +264,64 @@ const TrialClassPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Terms & Conditions Dialog */}
+      <Dialog open={showTnC} onOpenChange={setShowTnC}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-primary">
+              Single Trial Pass $19 : Terms & Conditions
+            </DialogTitle>
+            <DialogDescription className="sr-only">
+              Terms and conditions for the Single Trial Pass at $19
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 space-y-3">
+            <ul className="space-y-3 text-foreground">
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Valid for first-time clients only (no prior visits or packages with am Pilates).</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Trial is limited to one class per person.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>First time trial class is for Introductory group reformer classes only.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Advance booking required and subject to availability.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Full payment required to confirm booking.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Paid bookings are non-refundable and non-transferable.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>12 hours cancellation policy applies. Late cancellations or no-shows will result in forfeiture of the trial.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Grip socks are mandatory (available for purchase in studio).</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>Not valid in conjunction with other promotions, discounts or packages.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-primary font-bold">•</span>
+                <span>am Pilates reserves the right to amend or withdraw the trial offer without prior notice.</span>
+              </li>
+            </ul>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

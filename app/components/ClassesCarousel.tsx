@@ -152,7 +152,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
                   alt={item.imageAlt}
                   width={400}
                   height={300}
-                  className="w-full aspect-[4/3] rounded-3xl object-cover"
+                  className="w-full aspect-[16/9] md:aspect-[4/3] rounded-3xl object-cover"
                 />
                 <div className="py-4 md:py-6 px-2 md:px-3">
                   <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>

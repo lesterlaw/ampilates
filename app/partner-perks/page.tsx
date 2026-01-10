@@ -1,4 +1,5 @@
 import Image from "next/image";
+import GetStartedButton from "../components/GetStartedButton";
 
 export default function PartnerPerks() {
   return (
@@ -84,9 +85,7 @@ export default function PartnerPerks() {
                   these exclusive partner perks
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 md:px-8 py-3 rounded-full font-semibold">
-                Get Started
-              </button>
+              <GetStartedButton />
             </div>
           </div>
         </div>

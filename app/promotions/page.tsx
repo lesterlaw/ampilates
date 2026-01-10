@@ -42,7 +42,7 @@ export default async function Promotions() {
 
         <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden mb-8 md:mb-16">
           <Image
-            src={"/images/partnerperks.jpg"}
+            src={"/images/promotions-header.png"}
             alt="am Pilates Promotions"
             width={1200}
             height={800}

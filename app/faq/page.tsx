@@ -107,7 +107,7 @@ const faqData: FAQCategory[] = [
 ];
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState("packages");
+  const [activeCategory, setActiveCategory] = useState("general");
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
 
   const handleToggleExpand = (index: number) => {

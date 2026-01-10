@@ -94,7 +94,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <p className="text-[#232323] text-xs md:text-sm text-center">2025 am Pilates. All rights reserved.</p>
+          <p className="text-[#232323] text-xs md:text-sm text-center">© 2026 am Pilates. All rights reserved.</p>
         </div>
       </footer>
     </>

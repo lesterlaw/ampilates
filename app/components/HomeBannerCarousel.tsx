@@ -63,7 +63,7 @@ const HomeBannerCarousel = () => {
 
   return (
     <div
-      className="relative w-full overflow-hidden aspect-[16/10] md:aspect-[21/9] mb-8 md:mb-16"
+      className="relative w-full overflow-hidden aspect-[16/7] md:aspect-[21/9] mb-8 md:mb-16"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -137,4 +137,3 @@ const HomeBannerCarousel = () => {
 };
 
 export default HomeBannerCarousel;
-

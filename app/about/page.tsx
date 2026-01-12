@@ -133,21 +133,21 @@ export default function About() {
               {/* First Row - 3 items with huge gaps */}
               {/* Flexibility - Top Left */}
               <div className="absolute top-[10%] bg-[#D2D9D2] backdrop-blur-sm rounded-full px-3 md:px-6 lg:px-8 py-1 md:py-2 shadow">
-                <span className="text-[#4a4a4a] font-semibold text-xs md:text-sm">
+                <span className="text-[#4a4a4a] font-semibold text-[10px] md:text-sm">
                   Flexibility
                 </span>
               </div>
 
               {/* Core Strength - Top Center */}
               <div className="absolute top-[10%] left-[54%] transform -translate-x-1/2 bg-[#D2D9D2] backdrop-blur-sm rounded-full px-3 md:px-6 lg:px-8 py-1 md:py-2 shadow">
-                <span className="text-[#4a4a4a] font-semibold text-xs md:text-sm">
+                <span className="text-[#4a4a4a] font-semibold text-[10px] md:text-sm">
                   Core Strength
                 </span>
               </div>
 
               {/* Posture Enhancement - Top Right */}
               <div className="absolute top-[10%] right-[0%] bg-[#D2D9D2] backdrop-blur-sm rounded-full px-2 md:px-4 lg:px-8 py-1 md:py-2 shadow">
-                <span className="text-[#4a4a4a] font-semibold text-xs md:text-sm text-center">
+                <span className="text-[#4a4a4a] font-semibold text-[10px] md:text-sm text-center">
                   Posture<br className="hidden md:block" />
                   Enhancement
                 </span>
@@ -155,15 +155,15 @@ export default function About() {
 
               {/* Second Row - 2 items with huge gaps */}
               {/* Mind-Body Connection - Bottom Left Quarter */}
-              <div className="absolute bottom-[30%] left-[10%] md:left-[25%] bg-[#D2D9D2] backdrop-blur-sm rounded-full px-2 md:px-6 lg:px-8 py-1 md:py-2 shadow">
-                <span className="text-[#4a4a4a] font-semibold text-xs md:text-sm">
+              <div className="absolute bottom-[30%] left-[20%] md:left-[25%] bg-[#D2D9D2] backdrop-blur-sm rounded-full px-2 md:px-6 lg:px-8 py-1 md:py-2 shadow">
+                <span className="text-[#4a4a4a] font-semibold text-[10px] md:text-sm">
                   Mind-Body Connection
                 </span>
               </div>
 
               {/* Injury Prevention - Bottom Right Quarter */}
               <div className="absolute bottom-[30%] right-[0] bg-[#D2D9D2] backdrop-blur-sm rounded-full px-3 md:px-6 lg:px-8 py-1 md:py-2 shadow">
-                <span className="text-[#4a4a4a] font-semibold text-xs md:text-sm">
+                <span className="text-[#4a4a4a] font-semibold text-[10px] md:text-sm">
                   Injury Prevention
                 </span>
               </div>

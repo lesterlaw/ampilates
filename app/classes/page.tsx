@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import DifficultyIcon from "../components/DifficultyIcon";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -317,12 +318,12 @@ export default function Classes() {
                     <p className="text-xl md:text-2xl font-bold">
                       {pass.price}
                     </p>
-                    <button 
-                      onClick={openModal}
-                      className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm hover:bg-[#7a8f84] transition-colors duration-200"
+                    <Link 
+                      href="/trial"
+                      className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm hover:bg-[#7a8f84] transition-colors duration-200 inline-block text-center"
                     >
                       Purchase Now
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -356,12 +357,12 @@ export default function Classes() {
                     <p className="text-xl md:text-2xl font-bold">
                       {pass.price}
                     </p>
-                    <button 
-                      onClick={openModal}
-                      className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm hover:bg-[#7a8f84] transition-colors duration-200"
+                    <Link 
+                      href="/trial"
+                      className="bg-[#94aa9f] text-white px-6 md:px-8 py-2 md:py-1 rounded-full font-bold text-xs md:text-sm hover:bg-[#7a8f84] transition-colors duration-200 inline-block text-center"
                     >
                       Purchase Now
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

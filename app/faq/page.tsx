@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useWhatsApp } from "../contexts/WhatsAppContext";
 
 type FAQItem = {
   question: string;
@@ -109,6 +110,7 @@ const faqData: FAQCategory[] = [
 export default function FAQ() {
   const [activeCategory, setActiveCategory] = useState("general");
   const [expandedItems, setExpandedItems] = useState<number[]>([]);
+  const { openModal } = useWhatsApp();
 
   const handleToggleExpand = (index: number) => {
     setExpandedItems(prev => 
@@ -251,7 +253,10 @@ export default function FAQ() {
                   We're here to help you start your journey
                 </p>
               </div>
-              <button className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-8 md:py-3 rounded-full font-semibold">
+              <button 
+                onClick={openModal}
+                className="cursor-pointer hover:bg-[lightgray] transition-all duration-300 bg-white text-[#80978b] px-6 py-2.5 md:px-8 md:py-3 rounded-full font-semibold"
+              >
                 Contact Us
               </button>
             </div>

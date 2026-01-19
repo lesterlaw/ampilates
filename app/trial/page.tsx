@@ -232,39 +232,6 @@ const TrialClassPage = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="border-t border-gray-300 pt-16">
-            <div className="mb-12">
-              <h3 className="text-2xl lg:text-3xl font-semibold text-foreground mb-4">
-                Subscribe to the Newsletter
-              </h3>
-              <p className="text-lg text-secondary leading-relaxed">
-                Subscribe to our newsletter to receive latest <br />
-                updates, news and promotions. No spams, we <br />
-                promise.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-full border border-gray-300 bg-white text-lg placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-              <button className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
-
-            <p className="text-lg text-secondary">
-              By submitting your email address, you agree to receive emails from CleanCrew. You may unsubscribe anytime.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Terms & Conditions Dialog */}
       <Dialog open={showTnC} onOpenChange={setShowTnC}>
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">

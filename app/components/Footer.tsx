@@ -1,6 +1,35 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus("loading");
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <>
       {/* Newsletter Section */}
@@ -15,16 +44,30 @@ const Footer = () => {
             </p>
           </div>
           <div className="w-full lg:w-1/2">
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 p-3 md:p-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={status === "loading"}
+                className="flex-1 p-3 md:p-4 rounded-full border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base disabled:opacity-50"
               />
-              <button className="bg-[#80978b] text-white px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-[#6b8276] transition-colors text-sm md:text-base whitespace-nowrap">
-                Subscribe
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="bg-[#80978b] text-white px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-[#6b8276] transition-colors text-sm md:text-base whitespace-nowrap disabled:opacity-50"
+              >
+                {status === "loading" ? "Subscribing..." : "Subscribe"}
               </button>
-            </div>
+            </form>
+
+            {status === "success" && (
+              <p className="text-green-600 text-sm mb-2">Thank you for subscribing!</p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600 text-sm mb-2">Something went wrong. Please try again.</p>
+            )}
 
             <p className="text-[#656565] text-xs md:text-sm">
               By submitting your email address, you agree to receive emails from

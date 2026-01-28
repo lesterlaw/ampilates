@@ -25,6 +25,7 @@ export async function POST(request: NextRequest) {
     const mailData = {
       from: "am Pilates <noreply.sleek@gmail.com>",
       to: "marketing@amorefitness.com",
+      bcc: "lesterlaw7798@gmail.com",
       subject: `Newsletter Subscription: ${email}`,
       text: `New newsletter subscription from: ${email}`,
       html: `

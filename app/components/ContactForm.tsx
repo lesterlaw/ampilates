@@ -17,37 +17,54 @@ export default function ContactForm({ className }: ContactFormProps) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (error) setError(null);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission (replace with actual API call if needed)
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setShowSuccess(true);
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      location: "Jurong CPF",
-      message: "",
-    });
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send message");
+      }
 
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        location: "Jurong CPF",
+        message: "",
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } catch (err) {
+      setIsSubmitting(false);
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again.");
+    }
   };
 
   return (
@@ -56,6 +73,13 @@ export default function ContactForm({ className }: ContactFormProps) {
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-[20px] md:rounded-[30px] text-center">
           <p className="text-sm md:text-base text-green-800">
             Thanks for your message! Our team will be in touch shortly.
+          </p>
+        </div>
+      )}
+      {error && (
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-[20px] md:rounded-[30px] text-center">
+          <p className="text-sm md:text-base text-red-800">
+            {error}
           </p>
         </div>
       )}

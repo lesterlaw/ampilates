@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
+import DifficultyIcon from "../components/DifficultyIcon";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -56,6 +57,7 @@ export default function Classes() {
       title: "Introductory Class",
       imageSrc: "/images/introduction-class.jpg",
       imageAlt: "Introductory Class",
+      difficulty: undefined as number | undefined,
       description: (
         <>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed mb-4">
@@ -72,6 +74,7 @@ export default function Classes() {
       title: "Firm Foundation",
       imageSrc: "/images/firmfoundationcropped.png",
       imageAlt: "Firm Foundation",
+      difficulty: 1,
       description: (
         <>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed mb-4 whitespace-pre-line">
@@ -87,6 +90,7 @@ export default function Classes() {
       title: "Essential Strength",
       imageSrc: "/images/essentialstrengthcropped.png",
       imageAlt: "Essential Strength Flexibility",
+      difficulty: 2,
       description: (
         <>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed mb-4">
@@ -105,6 +109,7 @@ export default function Classes() {
       title: "Active Mobility",
       imageSrc: "/images/activemobilitycropped.png",
       imageAlt: "Active Mobility",
+      difficulty: 2,
       description: (
         <>
           <p className="text-sm md:text-base text-[#656565] leading-relaxed mb-4">
@@ -220,6 +225,14 @@ export default function Classes() {
                   />
                   <div className="py-4 md:py-6 px-2 md:px-3">
                     <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>
+                    {item.difficulty && (
+                      <p className="text-[#232323] mb-2 flex items-center">
+                        Difficulty level:
+                        {Array.from({ length: item.difficulty }).map((_, i) => (
+                          <DifficultyIcon key={i} className="w-4 h-4 text-[#80978b] ml-2 first:ml-2" />
+                        ))}
+                      </p>
+                    )}
                     <div className="text-sm md:text-base text-[#656565] leading-relaxed">{item.description}</div>
                   </div>
                 </div>

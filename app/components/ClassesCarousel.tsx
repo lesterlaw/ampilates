@@ -3,12 +3,14 @@
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import DifficultyIcon from "./DifficultyIcon";
 import { motion, useReducedMotion } from "framer-motion";
 
 type ClassCard = {
   title: string;
   imageSrc: string;
   imageAlt: string;
+  difficulty?: number;
   description: string;
 };
 
@@ -31,6 +33,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
         title: "Firm Foundation",
         imageSrc: "/images/firmfoundationcropped.png",
         imageAlt: "Firm Foundation",
+        difficulty: 1,
         description:
           "Your Next Step to Mastering Pilates! This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence.",
       },
@@ -38,6 +41,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
         title: "Essential Strength",
         imageSrc: "/images/essentialstrengthcropped.png",
         imageAlt: "Essential Strength Flexibility",
+        difficulty: 2,
         description:
           "For the Pilates Girlies Starting Their Strength Journey. Ready to feel stronger and more stable? Learn how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.",
       },
@@ -45,6 +49,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
         title: "Active Mobility",
         imageSrc: "/images/activemobilitycropped.png",
         imageAlt: "Active Mobility",
+        difficulty: 2,
         description:
           "Flexibility & Mobility Goals? Let's Get Moving! Improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.",
       },
@@ -150,6 +155,14 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
                 />
                 <div className="py-4 md:py-6 px-2 md:px-3">
                   <h3 className="text-xl md:text-2xl font-bold text-[#232323] mb-2">{item.title}</h3>
+                  {item.difficulty && (
+                    <p className="text-[#232323] mb-2 flex items-center">
+                      Difficulty level:
+                      {Array.from({ length: item.difficulty }).map((_, i) => (
+                        <DifficultyIcon key={i} className="w-4 h-4 text-[#80978b] ml-2 first:ml-2" />
+                      ))}
+                    </p>
+                  )}
                   <p className="text-sm md:text-base text-[#656565] leading-relaxed">{item.description}</p>
                 </div>
               </div>

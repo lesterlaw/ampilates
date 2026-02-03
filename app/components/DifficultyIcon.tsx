@@ -1,15 +1,19 @@
+import { CSSProperties } from "react";
+
 type DifficultyIconProps = {
   className?: string;
   title?: string;
+  style?: CSSProperties;
 };
 
-const DifficultyIcon = ({ className, title }: DifficultyIconProps) => {
+const DifficultyIcon = ({ className, title, style }: DifficultyIconProps) => {
   return (
     <svg
       id="fi_10760625"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       className={className}
+      style={style}
       aria-hidden={title ? undefined : true}
       role={title ? "img" : undefined}
       focusable="false"

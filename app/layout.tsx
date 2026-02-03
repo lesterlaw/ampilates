@@ -24,6 +24,11 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   title: "am Pilates - Elevate your mind. Transform your body.",
   description: "Discover the beauty of Pilates at am Pilates, a serene studio in the West of Singapore. Our diverse classes are designed to empower and strengthen your body.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

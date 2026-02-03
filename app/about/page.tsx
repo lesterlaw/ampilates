@@ -188,7 +188,7 @@ export default function About() {
           closer to you.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           <div className="">
             <Image
               src={"/images/jurong-outlet.png"}
@@ -267,7 +267,7 @@ export default function About() {
             </a>
             <p className="text-[#656565] text-xs md:text-sm flex flex-col gap-2">
               <a
-                href="mailto:hello@ampilates.sg"
+                href="mailto:pc@ampilates.sg"
                 className="flex items-center gap-2 hover:text-[#80978b] transition-colors cursor-pointer"
               >
                 <svg
@@ -277,7 +277,7 @@ export default function About() {
                 >
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                hello@ampilates.sg
+                pc@ampilates.sg
               </a>
               <a
                 href="tel:+6583335316"
@@ -292,6 +292,24 @@ export default function About() {
                 </svg>
                 (65) 8333-5316
               </a>
+            </p>
+          </div>
+
+          <div className="">
+            <Image
+              src={"/images/location3.png"}
+              alt="Connexis Studio"
+              width={500}
+              height={300}
+              className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
+            />
+            <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
+              Connexis <span className="text-base md:text-lg font-normal">(Coming Soon)</span>
+            </h3>
+            <p className="text-sm md:text-base text-[#656565] mb-4">
+              1 Fusionopolis Way, #B1-07/08
+              <br />
+              Singapore 138632
             </p>
           </div>
         </div>

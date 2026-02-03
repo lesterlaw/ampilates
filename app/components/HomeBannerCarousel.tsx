@@ -12,8 +12,12 @@ type CarouselImage = {
 
 const carouselImages: CarouselImage[] = [
   {
-    src: "/images/Carousell Solo.jpg",
-    alt: "Solo Pilates Session",
+    src: "/images/carou1.png",
+    alt: "Pilates Session",
+  },
+  {
+    src: "/images/carou2.png",
+    alt: "Pilates Reformer Exercise",
   },
   {
     src: "/images/Carousell (duo).jpg",

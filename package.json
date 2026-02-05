@@ -12,7 +12,8 @@
     "db:generate": "prisma generate",
     "db:seed": "tsx prisma/seed.ts",
     "db:seed-admin": "tsx prisma/seed-admin.ts",
-    "optimize:images": "tsx scripts/optimize-images.ts"
+    "optimize:images": "tsx scripts/optimize-images.ts",
+    "setup:storage": "tsx scripts/setup-storage.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

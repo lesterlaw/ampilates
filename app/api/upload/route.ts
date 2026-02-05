@@ -35,8 +35,15 @@ export async function POST(request: NextRequest) {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
+    // Sanitize filename: remove spaces and special characters
+    const sanitizedName = file.name
+      .replace(/\s+/g, "-") // Replace spaces with dashes
+      .replace(/[^a-zA-Z0-9.-]/g, ""); // Remove special characters
+
     // Upload to Supabase Storage
-    const fileName = path || `promotions/${Date.now()}-${file.name}`;
+    const fileName = path 
+      ? path.replace(/\s+/g, "-").replace(/[^a-zA-Z0-9./-]/g, "")
+      : `promotions/${Date.now()}-${sanitizedName}`;
     const { data, error } = await supabase.storage
       .from(bucket)
       .upload(fileName, buffer, {

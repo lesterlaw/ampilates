@@ -42,11 +42,16 @@ export default function ImageUploader({ value, onChange, bucket = "promotions" }
       const previewUrl = URL.createObjectURL(file);
       setPreview(previewUrl);
 
+      // Sanitize filename for Supabase Storage
+      const sanitizedName = file.name
+        .replace(/\s+/g, "-")
+        .replace(/[^a-zA-Z0-9.-]/g, "");
+
       // Upload to Supabase Storage
       const formData = new FormData();
       formData.append("file", file);
       formData.append("bucket", bucket);
-      formData.append("path", `promotions/${Date.now()}-${file.name}`);
+      formData.append("path", `promotions/${Date.now()}-${sanitizedName}`);
 
       const response = await fetch("/api/upload", {
         method: "POST",

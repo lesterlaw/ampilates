@@ -6,12 +6,14 @@ export const dynamic = 'force-dynamic';
 
 const renderFeature = (feature: string, index: number, isNumbered: boolean = false) => {
   if (isNumbered) {
+    // Strip leading number prefix (e.g., "1. ", "2. ") since the green circle already shows the number
+    const cleanedFeature = feature.replace(/^\d+\.\s*/, "");
     return (
       <div key={index} className="flex items-start gap-3">
         <span className="bg-[#80978b] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0">
           {index + 1}
         </span>
-        <p className="text-base md:text-lg text-[#656565]" dangerouslySetInnerHTML={{ __html: feature }} />
+        <p className="text-base md:text-lg text-[#656565]" dangerouslySetInnerHTML={{ __html: cleanedFeature }} />
       </div>
     );
   }

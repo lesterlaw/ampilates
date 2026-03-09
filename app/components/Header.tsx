@@ -3,15 +3,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
+
 import DownloadAppModal from "./DownloadAppModal";
+
+const ABOUT_MENU_ITEMS = [
+  { href: "/about", label: "About Us" },
+  { href: "/about/team", label: "Team" },
+];
 
 const Header = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
+  const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
+  const [isAboutMobileMenuOpen, setIsAboutMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -36,22 +47,58 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
-  const getNavItemClass = (path: string) => {
-    if (pathname === path) {
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsAboutMenuOpen(false);
+    setIsAboutMobileMenuOpen(false);
+  }, [pathname]);
+
+  const getNavItemClass = (path: string, isActive = pathname === path) => {
+    if (isActive) {
       return "text-[#80978b] font-bold font-display tracking-wider";
     }
     return "text-[#232323] font-display tracking-wider hover:text-[#80978b] transition-colors";
   };
 
-  const getMobileNavItemClass = (path: string) => {
-    if (pathname === path) {
+  const getMobileNavItemClass = (path: string, isActive = pathname === path) => {
+    if (isActive) {
       return "text-[#80978b] font-bold font-display tracking-wider text-lg py-3 border-b border-gray-200 block";
     }
     return "text-[#232323] font-display tracking-wider hover:text-[#80978b] transition-colors text-lg py-3 border-b border-gray-200 block";
   };
 
+  const getDesktopDropdownItemClass = (path: string) =>
+    cn(
+      "block rounded-2xl px-4 py-2 text-sm font-display tracking-wider transition-colors",
+      pathname === path
+        ? "bg-[#e4e8e2] text-[#80978b] font-bold"
+        : "text-[#232323] hover:bg-[#f3f4ef] hover:text-[#80978b]"
+    );
+
+  const getMobileSubNavItemClass = (path: string) =>
+    cn(
+      "block rounded-full px-4 py-2 text-base font-display tracking-wider transition-colors",
+      pathname === path
+        ? "bg-[#e4e8e2] text-[#80978b] font-bold"
+        : "text-[#232323] hover:text-[#80978b]"
+    );
+
+  const isAboutSection = pathname === "/about" || pathname.startsWith("/about/");
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsAboutMenuOpen(false);
+    setIsAboutMobileMenuOpen(false);
+  };
+
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const nextMenuState = !isMenuOpen;
+    setIsMenuOpen(nextMenuState);
+    setIsAboutMenuOpen(false);
+
+    if (!nextMenuState) {
+      setIsAboutMobileMenuOpen(false);
+    }
   };
 
   const prefersReducedMotion = useReducedMotion();
@@ -90,9 +137,52 @@ const Header = () => {
           <Link href="/classes" className={getNavItemClass("/classes")}>
             Classes
           </Link>
-          <Link href="/about" className={getNavItemClass("/about")}>
-            About
-          </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setIsAboutMenuOpen(true)}
+            onMouseLeave={() => setIsAboutMenuOpen(false)}
+          >
+            <button
+              type="button"
+              className={cn(
+                getNavItemClass("/about", isAboutSection),
+                "inline-flex items-center gap-1"
+              )}
+              onClick={() => setIsAboutMenuOpen((currentValue) => !currentValue)}
+              aria-haspopup="menu"
+              aria-expanded={isAboutMenuOpen}
+            >
+              About
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  isAboutMenuOpen && "rotate-180"
+                )}
+              />
+            </button>
+
+            <div
+              className={cn(
+                "absolute left-0 top-full z-20 w-48 pt-3 transition-all",
+                isAboutMenuOpen
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible -translate-y-1 opacity-0 pointer-events-none"
+              )}
+            >
+              <div className="rounded-3xl border border-[#e4e8e2] bg-[#fafaf5] p-2 shadow-lg">
+                {ABOUT_MENU_ITEMS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={getDesktopDropdownItemClass(item.href)}
+                    onClick={() => setIsAboutMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           <Link href="/faq" className={getNavItemClass("/faq")}>
             FAQs
           </Link>
@@ -183,7 +273,7 @@ const Header = () => {
         className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
-        onClick={toggleMenu}
+        onClick={closeMenu}
       ></div>
 
       {/* Mobile Menu */}
@@ -225,42 +315,72 @@ const Header = () => {
           <Link
             href="/classes"
             className={getMobileNavItemClass("/classes")}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Classes
           </Link>
-          <Link
-            href="/about"
-            className={getMobileNavItemClass("/about")}
-            onClick={toggleMenu}
+          <button
+            type="button"
+            className={cn(
+              getMobileNavItemClass("/about", isAboutSection),
+              "flex w-full items-center justify-between text-left"
+            )}
+            onClick={() =>
+              setIsAboutMobileMenuOpen((currentValue) => !currentValue)
+            }
+            aria-expanded={isAboutMobileMenuOpen}
+            aria-controls="mobile-about-submenu"
           >
-            About
-          </Link>
+            <span>About</span>
+            <ChevronDown
+              className={cn(
+                "h-5 w-5 transition-transform",
+                isAboutMobileMenuOpen && "rotate-180"
+              )}
+            />
+          </button>
+          {isAboutMobileMenuOpen && (
+            <div
+              id="mobile-about-submenu"
+              className="ml-4 mb-3 flex flex-col gap-1 border-b border-gray-200 pb-3 pt-2"
+            >
+              {ABOUT_MENU_ITEMS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={getMobileSubNavItemClass(item.href)}
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          )}
           <Link
             href="/faq"
             className={getMobileNavItemClass("/faq")}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             FAQs
           </Link>
           <Link
             href="/promotions"
             className={getMobileNavItemClass("/promotions")}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Promotions
           </Link>
           <Link
             href="/partner-perks"
             className={getMobileNavItemClass("/partner-perks")}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Partner Perks
           </Link>
           <Link
             href="/contact"
             className={getMobileNavItemClass("/contact")}
-            onClick={toggleMenu}
+            onClick={closeMenu}
           >
             Contact Us
           </Link>
@@ -305,7 +425,7 @@ const Header = () => {
           <button 
             onClick={() => {
               setIsDownloadModalOpen(true);
-              setIsMenuOpen(false);
+              closeMenu();
             }}
             className="w-full bg-[#80978b] text-white px-6 py-3 rounded-full text-base font-medium hover:bg-[#6b8276] transition-colors"
           >

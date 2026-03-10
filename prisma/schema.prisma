@@ -30,6 +30,20 @@ model Promotion {
   @@index([isActive])
 }
 
+model TeamMember {
+  id        String   @id @default(cuid())
+  name      String
+  bio       String   @db.Text
+  imageUrl  String
+  order     Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([order])
+  @@index([isActive])
+}
+
 model Admin {
   id        String   @id @default(cuid())
   email     String   @unique

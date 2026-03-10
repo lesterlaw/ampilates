@@ -7,9 +7,15 @@ type ImageUploaderProps = {
   value?: string;
   onChange: (url: string) => void;
   bucket?: string;
+  pathPrefix?: string;
 };
 
-export default function ImageUploader({ value, onChange, bucket = "promotions" }: ImageUploaderProps) {
+export default function ImageUploader({
+  value,
+  onChange,
+  bucket = "promotions",
+  pathPrefix = bucket,
+}: ImageUploaderProps) {
   const [uploading, setUploading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
   const [preview, setPreview] = useState<string | null>(value || null);
@@ -51,7 +57,7 @@ export default function ImageUploader({ value, onChange, bucket = "promotions" }
       const formData = new FormData();
       formData.append("file", file);
       formData.append("bucket", bucket);
-      formData.append("path", `promotions/${Date.now()}-${sanitizedName}`);
+      formData.append("path", `${pathPrefix}/${Date.now()}-${sanitizedName}`);
 
       const response = await fetch("/api/upload", {
         method: "POST",
@@ -72,7 +78,7 @@ export default function ImageUploader({ value, onChange, bucket = "promotions" }
     } finally {
       setUploading(false);
     }
-  }, [bucket, onChange, value]);
+  }, [bucket, onChange, pathPrefix, value]);
 
   const handleDrag = useCallback((e: React.DragEvent) => {
     e.preventDefault();

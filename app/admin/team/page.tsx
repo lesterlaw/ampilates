@@ -1,32 +1,32 @@
 import { redirect } from "next/navigation";
-import { getCurrentAdmin } from "@/app/actions/auth";
-import { getAllPromotions } from "@/app/actions/promotions-admin";
-import AdminHeader from "@/app/components/AdminHeader";
-import PromotionsManager from "@/app/components/PromotionsManager";
 
-export default async function AdminPromotionsPage() {
+import { getCurrentAdmin } from "@/app/actions/auth";
+import { getAllTeamMembers } from "@/app/actions/team-admin";
+import AdminHeader from "@/app/components/AdminHeader";
+import TeamMembersManager from "@/app/components/TeamMembersManager";
+
+export default async function AdminTeamPage() {
   const admin = await getCurrentAdmin();
 
   if (!admin) {
     redirect("/admin/login");
   }
 
-  const result = await getAllPromotions();
-  const promotions = result.promotions || [];
+  const result = await getAllTeamMembers();
+  const teamMembers = result.teamMembers || [];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <AdminHeader
         adminEmail={admin.email}
-        title="Promotions CMS"
-        description="Manage your promotions"
-        currentSection="promotions"
+        title="Team CMS"
+        description="Manage your team profiles and instructor images"
+        currentSection="team"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <PromotionsManager initialPromotions={promotions} />
+        <TeamMembersManager initialTeamMembers={teamMembers} />
       </div>
     </div>
   );
 }
-

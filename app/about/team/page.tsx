@@ -98,9 +98,9 @@ export default function TeamPage() {
               <Image
                 src={profile.imageSrc}
                 alt={profile.imageAlt}
-                width={700}
-                height={900}
-                className="w-full aspect-[4/5] object-cover object-top"
+                width={960}
+                height={640}
+                className="w-full aspect-[3/2] object-cover object-top"
               />
             </div>
 

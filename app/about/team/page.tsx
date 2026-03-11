@@ -4,6 +4,12 @@ import { getTeamMembers } from "@/app/actions/team";
 
 export const dynamic = "force-dynamic";
 
+const getBioParagraphs = (bio: string) =>
+  bio
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
 export default async function TeamPage() {
   const teamMembers = await getTeamMembers();
 
@@ -40,7 +46,13 @@ export default async function TeamPage() {
               <h2 className="font-display text-[20px] font-bold text-[#656565]">
                 {teamMember.name}
               </h2>
-              <p className="text-sm text-[#656565] leading-7">{teamMember.bio}</p>
+              <div className="space-y-4 text-sm text-[#656565] leading-7">
+                {getBioParagraphs(teamMember.bio).map((paragraph) => (
+                  <p key={`${teamMember.id}-${paragraph.slice(0, 24)}`} className="whitespace-pre-line">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           </article>
         ))}

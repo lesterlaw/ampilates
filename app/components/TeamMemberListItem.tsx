@@ -104,7 +104,9 @@ export default function TeamMemberListItem({
                   Order: {teamMember.order}
                 </span>
               </div>
-              <p className="text-sm text-[#656565] line-clamp-4">{teamMember.bio}</p>
+              <p className="text-sm text-[#656565] line-clamp-4 whitespace-pre-line">
+                {teamMember.bio}
+              </p>
             </div>
           </div>
         </div>

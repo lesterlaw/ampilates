@@ -21,6 +21,8 @@ const lexend = Lexend({
   variable: "--font-lexend"
 });
 
+const GOOGLE_TAG_ID = "G-17NK92JMEG";
+
 export const metadata: Metadata = {
   title: "am Pilates - Elevate your mind. Transform your body.",
   description: "Discover the beauty of Pilates at am Pilates, a serene studio in the West of Singapore. Our diverse classes are designed to empower and strengthen your body.",
@@ -38,6 +40,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_TAG_ID}');
+          `,
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${playfair.variable} ${lexend.variable} antialiased`}
       >

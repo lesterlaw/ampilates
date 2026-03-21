@@ -13,7 +13,7 @@ import DownloadAppModal from "./DownloadAppModal";
 
 const ABOUT_MENU_ITEMS = [
   { href: "/about", label: "About Us" },
-  { href: "/about/team", label: "Team" },
+  { href: "/about/team", label: "Our Team" },
 ];
 
 const Header = () => {

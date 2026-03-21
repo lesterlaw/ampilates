@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Lexend } from "next/font/google";
+import { Montserrat, Lexend } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppContact from "./components/WhatsAppContact";
 import { WhatsAppProvider } from "./contexts/WhatsAppContext";
 
-const inter = Inter({ 
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter"
-});
-
-const playfair = Playfair_Display({ 
-  subsets: ["latin"],
-  variable: "--font-playfair"
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"],
 });
 
 const lexend = Lexend({ 
@@ -57,7 +53,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} ${lexend.variable} antialiased`}
+        className={`${montserrat.variable} ${lexend.variable} antialiased`}
       >
         <WhatsAppProvider>
           <div className="min-h-screen bg-[#fafaf5]">

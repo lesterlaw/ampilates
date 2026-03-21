@@ -12,17 +12,57 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-7xl mx-auto items-center justify-center">
           <div className="text-white w-full">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8">
-              Welcome to am Pilates
+              Our Brand Story
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Discover the transformative power of movement.
-              <br /><br />
-              Our diverse range of Pilates classes is thoughtfully designed to empower, strengthen, and energize your body. Whether you're a beginner or seasoned practitioner, each session is tailored to meet your unique needs—helping you move with intention and feel the flow of positive energy.
-              <br /><br />
-              Let’s embark on this journey together, embracing the strength, balance, and vitality that Pilates brings.
-              <br /><br />
-              Join us at our tranquil studio on the West side of Singapore at Jurong CPF, or experience our brand-new sanctuary at Punggol Coast Mall in the North-East—each space crafted to bring harmony and wellness closer to you.
-            </p>
+            <div className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed space-y-4 md:space-y-5">
+              <p>
+                Inspired by the belief that strength should feel intelligent,
+                not aggressive — am Pilates was created as a space where women
+                build power through precision.
+              </p>
+              <p>
+                In a world that often demands speed, intensity, and constant
+                output, we choose something different.
+              </p>
+              <p>
+                We choose control.
+                <br />
+                We choose alignment.
+                <br />
+                We choose intention.
+              </p>
+              <p>
+                Because true strength isn&apos;t rushed.
+                <br />
+                It is refined.
+              </p>
+              <p>
+                Rooted in the discipline of Reformer Pilates, am Pilates
+                transforms movement into mastery. Every class is thoughtfully
+                designed to activate with purpose, lengthen with awareness and
+                strengthen with control. Here, progress is measured not by
+                exhaustion, but by precision. Not by force, but by form.
+              </p>
+              <p>
+                We believe that strength is deeply personal. It isn&apos;t loud.
+                It isn&apos;t performative. It doesn&apos;t need to prove itself.
+                It is built slowly — through consistency, clarity, and connection
+                to your body.
+              </p>
+              <p>
+                At am Pilates, we honor the woman you are today while supporting
+                the woman you are becoming.
+              </p>
+              <p>
+                More than a studio, am Pilates is a community of women choosing
+                to move with awareness and grow with intention. A space where
+                first timers feel supported, and seasoned movers continue to
+                refine. A practice that evolves with you through every life
+                stage.
+              </p>
+              <p>This is Pilates, redefined.</p>
+              <p>This is am Pilates.</p>
+            </div>
           </div>
           <Image
             src="/images/welcometopilates.png"
@@ -61,7 +101,7 @@ export default function About() {
                 className="w-16 h-16"
               />
             </div>
-            <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
+            <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
               Expert Instruction
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
@@ -81,7 +121,7 @@ export default function About() {
                 className="w-16 h-16"
               />
             </div>
-            <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
+            <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
               State-of-the-Art Equipment
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
@@ -100,7 +140,7 @@ export default function About() {
                 className="w-16 h-16"
               />
             </div>
-            <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
+            <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
               Supportive Community
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
@@ -197,7 +237,7 @@ export default function About() {
               height={300}
               className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
-            <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
+            <h3 className="font-sans text-xl md:text-2xl font-bold text-[#232323] mb-2">
               Jurong CPF Building
             </h3>
             <a
@@ -250,7 +290,7 @@ export default function About() {
               height={300}
               className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
-            <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
+            <h3 className="font-sans text-xl md:text-2xl font-bold text-[#232323] mb-2">
               TOWER 88 PUNGGOL WAY
             </h3>
             <a
@@ -303,13 +343,28 @@ export default function About() {
               height={300}
               className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
-            <h3 className="font-display text-xl md:text-2xl font-bold text-[#232323] mb-2">
+            <h3 className="font-sans text-xl md:text-2xl font-bold text-[#232323] mb-2">
               Connexis <span className="text-base md:text-lg font-normal">(Coming Soon)</span>
             </h3>
             <p className="text-sm md:text-base text-[#656565] mb-4">
               1 Fusionopolis Way, #B1-07/08
               <br />
               Singapore 138632
+            </p>
+            <p className="text-[#656565] text-xs md:text-sm flex flex-col gap-2">
+              <a
+                href="mailto:fp@ampilates.sg"
+                className="flex items-center gap-2 hover:text-[#80978b] transition-colors cursor-pointer"
+              >
+                <svg
+                  className="w-4 h-4 text-[#656565]"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                fp@ampilates.sg
+              </a>
             </p>
           </div>
         </div>
@@ -370,89 +425,6 @@ export default function About() {
                 <path d="M5.64 20l-.07-.07c-.57-.81-.57-1.92 0-2.73l.07-.07L12 10.76l6.36 6.37c.39.39.39 1.02 0 1.41-.39.39-1.02.39-1.41 0L12 13.59l-4.95 4.95c-.39.39-1.02.39-1.41 0zM12 3l7 7H5l7-7z" />
               </svg>
               <span className="text-white font-medium text-sm md:text-base">Water Station</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team Section */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#80978b] mb-3">
-          Our Team
-        </h2>
-        <p className="text-base md:text-lg text-[#656565] mb-6 md:mb-8">
-          Our dedicated instructors will guide you every step of the way. Join us today and be part of our community.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          <div className="text-center">
-            <div className="relative mb-4">
-              <Image
-                src="/images/our-team.jpg"
-                alt="Sarah Johnson"
-                width={300}
-                height={400}
-                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
-                <h3 className="font-display text-lg font-bold text-white mb-1">
-                  Sarah Johnson
-                </h3>
-                <p className="text-white/90 text-sm font-medium">Lead Instructor</p>
-              </div> */}
-            </div>
-          </div>
-
-          <div className="text-center">
-            <div className="relative mb-4">
-              <Image
-                src="/images/our-team1.jpg"
-                alt="Emily Chen"
-                width={300}
-                height={400}
-                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
-                <h3 className="font-display text-lg font-bold text-white mb-1">
-                  Emily Chen
-                </h3>
-                <p className="text-white/90 text-sm font-medium">Senior Instructor</p>
-              </div> */}
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="relative mb-4">
-              <Image
-                src="/images/our-team2.jpg"
-                alt="Emily Chen"
-                width={300}
-                height={400}
-                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
-                <h3 className="font-display text-lg font-bold text-white mb-1">
-                  Emily Chen
-                </h3>
-                <p className="text-white/90 text-sm font-medium">Senior Instructor</p>
-              </div> */}
-              </div>
-          </div>
-
-          <div className="text-center">
-            <div className="relative mb-4">
-              <Image
-                src="/images/our-team3.jpg"
-                alt="Amanda Lee"
-                width={300}
-                height={400}
-                className="w-full aspect-[3/4] object-cover object-[center_65%] rounded-2xl"
-              />
-              {/* <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm rounded-b-lg px-4 py-3">
-                <h3 className="font-display text-lg font-bold text-white mb-1">
-                  Amanda Lee
-                </h3>
-                <p className="text-white/90 text-sm font-medium">Instructor</p>
-              </div> */}
             </div>
           </div>
         </div>

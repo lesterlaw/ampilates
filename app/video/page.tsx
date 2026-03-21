@@ -12,7 +12,7 @@ export default function Home() {
             {/* Hero Section */}
             <FadeInOnView as="section" className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
                 <div className="text-center mb-8 md:mb-12">
-                    <h1 className="font-serif text-4xl md:text-6xl lg:text-8xl font-semibold text-[#232323] leading-tight mb-6 md:mb-8">
+                    <h1 className="font-serif text-4xl md:text-6xl lg:text-8xl font-semibold text-[#232323] mb-6 md:mb-8">
                         Empowering you,
                         <br />
                         one movement at a time.
@@ -54,7 +54,7 @@ export default function Home() {
                                 height={64}
                             />
                         </div>
-                        <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
+                        <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
                             Ladies
                             <br />
                             Exclusive
@@ -75,7 +75,7 @@ export default function Home() {
                                 height={64}
                             />
                         </div>
-                        <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
+                        <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
                             Dynamic
                             <br />
                             Reformer Group Class
@@ -113,7 +113,7 @@ export default function Home() {
                                 </g>
                             </svg>
                         </div>
-                        <h3 className="font-display text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
+                        <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
                             Conveniently
                             <br />
                             Located

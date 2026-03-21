@@ -17,7 +17,7 @@ export default async function TeamPage() {
     <section className="max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16">
       <div className="text-center mb-10 md:mb-14">
         <h1 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-[#80978b] mb-4">
-          Team
+          Our Team
         </h1>
         <p className="text-sm md:text-base text-[#656565] max-w-4xl mx-auto leading-relaxed">
           Our teachers are carefully selected and internationally certified to
@@ -43,7 +43,7 @@ export default async function TeamPage() {
             </div>
 
             <div className="space-y-4 p-6">
-              <h2 className="font-display text-[20px] font-bold text-[#656565]">
+              <h2 className="font-sans text-[20px] font-bold text-[#656565]">
                 {teamMember.name}
               </h2>
               <div className="space-y-4 text-sm text-[#656565] leading-7">

@@ -23,7 +23,7 @@ const TrialClassPage = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-primary leading-tight">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold font-serif text-primary">
                 Trial Class @ $19.00
               </h1>
               

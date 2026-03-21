@@ -37,6 +37,13 @@ export default function Contact() {
                 <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
                 <span className="text-base md:text-lg lg:text-xl text-[#232323]">pc@ampilates.sg</span>
               </div>
+
+              <div className="flex items-center space-x-3 md:space-x-4">
+                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
+                <span className="text-base md:text-lg lg:text-xl text-[#232323]">
+                  Connexis: fp@ampilates.sg
+                </span>
+              </div>
             </div>
           </div>
           

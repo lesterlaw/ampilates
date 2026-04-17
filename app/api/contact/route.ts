@@ -16,6 +16,9 @@ export async function POST(request: NextRequest) {
     // Map location to email address
     const getRecipientEmail = (location: string): string => {
       const locationLower = location.toLowerCase();
+      if (locationLower.includes("connexis")) {
+        return "fp@ampilates.sg";
+      }
       if (locationLower.includes("punggol")) {
         return "pc@ampilates.sg";
       }

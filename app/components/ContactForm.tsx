@@ -125,6 +125,7 @@ export default function ContactForm({ className }: ContactFormProps) {
               onChange={handleChange}
               className="w-full p-3 md:p-4 pr-10 rounded-full bg-white border border-gray-300 focus:outline-none focus:border-[#80978b] text-sm md:text-base appearance-none"
             >
+              <option>Connexis</option>
               <option>Jurong CPF</option>
               <option>Punggol Coast Mall</option>
             </select>

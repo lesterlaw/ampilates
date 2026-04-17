@@ -81,6 +81,7 @@ export default function WhatsAppContact() {
 
   const jurongLink = "https://wa.me/6596934753?text=Hi%20am%20Pilates%2C%20I%20would%20like%20to%20book%20a%20class%20at%20Jurong%20branch";
   const punggolLink = "https://wa.me/6583335316?text=Hi%20am%20Pilates%2C%20I%20would%20like%20to%20book%20a%20class%20at%20Punggol%20branch";
+  const connexisLink = "https://wa.me/6590933900?text=Hi%20am%20Pilates%2C%20I%20would%20like%20to%20book%20a%20class%20at%20Connexis%20branch";
 
   return (
     <>
@@ -244,6 +245,43 @@ export default function WhatsAppContact() {
                         <div className="flex items-center gap-2 text-green-600 text-sm font-medium">
                           <Phone size={14} />
                           +65 8333 5316
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </motion.div>
+
+                {/* Connexis */}
+                <motion.div
+                  className="border-2 border-gray-100 rounded-2xl p-4 hover:border-[#80978b] transition-colors cursor-pointer group"
+                  variants={cardVariants}
+                  custom={2}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <a
+                    href={connexisLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="bg-[#80978b] text-white p-2 rounded-full group-hover:bg-[#6b8276] transition-colors">
+                        <MapPin size={16} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-[#232323] mb-2 flex items-center gap-2">
+                          Connexis
+                          <span className="text-green-600 text-sm font-normal">
+                            Book now
+                          </span>
+                        </h3>
+                        <p className="text-sm text-[#656565] mb-2">
+                          Connect with our Connexis team on WhatsApp.
+                        </p>
+                        <div className="flex items-center gap-2 text-green-600 text-sm font-medium">
+                          <Phone size={14} />
+                          +65 9093 3900
                         </div>
                       </div>
                     </div>

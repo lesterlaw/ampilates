@@ -31,7 +31,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
       },
       {
         title: "Firm Foundation",
-        imageSrc: "/images/firmfoundationcropped.png",
+        imageSrc: "/NewFirm%20.png",
         imageAlt: "Firm Foundation",
         difficulty: 1,
         description:

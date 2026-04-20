@@ -337,7 +337,7 @@ export default function About() {
 
           <div className="">
             <Image
-              src={"/images/location3.png"}
+              src={"/images/ampilates-circle.png"}
               alt="Connexis Studio"
               width={500}
               height={300}
@@ -347,7 +347,7 @@ export default function About() {
               Connexis <span className="text-base md:text-lg font-normal">(Coming Soon)</span>
             </h3>
             <p className="text-sm md:text-base text-[#656565] mb-4">
-              1 Fusionopolis Way, #B1-07/08
+              1 Fusionopolis Way, #B1-07 (One-North MRT, Exit C)
               <br />
               Singapore 138632
             </p>

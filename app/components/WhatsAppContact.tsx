@@ -271,13 +271,15 @@ export default function WhatsAppContact() {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-bold text-[#232323] mb-2 flex items-center gap-2">
-                          Connexis
+                          📍 Connexis
                           <span className="text-green-600 text-sm font-normal">
                             Book now
                           </span>
                         </h3>
                         <p className="text-sm text-[#656565] mb-2">
-                          Connect with our Connexis team on WhatsApp.
+                          1 Fusionopolis Way, #B1-07 (One-North MRT, Exit C)
+                          <br />
+                          Singapore 138632
                         </p>
                         <div className="flex items-center gap-2 text-green-600 text-sm font-medium">
                           <Phone size={14} />

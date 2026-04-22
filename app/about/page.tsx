@@ -291,7 +291,7 @@ export default function About() {
               className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
             <h3 className="font-sans text-xl md:text-2xl font-bold text-[#232323] mb-2">
-              TOWER 88 PUNGGOL WAY
+              Tower 88 Punggol Way
             </h3>
             <a
               href="https://www.google.com/maps/place/am+Pilates+Punggol+Coast+Mall/@1.4155876,103.9078964,17z/data=!3m1!4b1!4m6!3m5!1s0x31da1545e1425bd1:0x1253a705f59dbf28!8m2!3d1.4155822!4d103.9104767!16s%2Fg%2F11yds3c6xr?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
@@ -347,7 +347,7 @@ export default function About() {
               Connexis <span className="text-base md:text-lg font-normal">(Coming Soon)</span>
             </h3>
             <p className="text-sm md:text-base text-[#656565] mb-4">
-              1 Fusionopolis Way, #B1-07 (One-North MRT, Exit C)
+              1 Fusionopolis Way, #B1-08 (One-North MRT, Exit C)
               <br />
               Singapore 138632
             </p>

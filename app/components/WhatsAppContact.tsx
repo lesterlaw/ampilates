@@ -277,7 +277,7 @@ export default function WhatsAppContact() {
                           </span>
                         </h3>
                         <p className="text-sm text-[#656565] mb-2">
-                          1 Fusionopolis Way, #B1-07 (One-North MRT, Exit C)
+                          1 Fusionopolis Way, #B1-08 (One-North MRT, Exit C)
                           <br />
                           Singapore 138632
                         </p>

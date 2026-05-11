@@ -1,8 +1,11 @@
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
+  const outletDetailTextClass =
+    "text-base md:text-lg lg:text-xl text-[#232323] leading-relaxed";
+
   return (
     <>
       {/* Contact Us Hero Section */}
@@ -17,39 +20,69 @@ export default function Contact() {
             </p>
             
             {/* Contact Information */}
-            <div className="space-y-4 md:space-y-6">
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">Jurong CPF: (65) 9693-4753</span>
+            <div className="space-y-8 md:space-y-10">
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
+                  <span className={outletDetailTextClass}>
+                    Jurong CPF: (65) 9693-4753
+                  </span>
+                </div>
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
+                  <span className={outletDetailTextClass}>
+                    21 Jurong Gateway Road #03-08/09/10 Jurong East, CPF Building (Office Lobby),
+                    Singapore 608546
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
+                  <span className={outletDetailTextClass}>
+                    hello@ampilates.sg
+                  </span>
+                </div>
               </div>
 
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">hello@ampilates.sg</span>
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
+                  <span className={outletDetailTextClass}>
+                    Punggol Coast Mall: (65) 8333-5316
+                  </span>
+                </div>
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
+                  <span className={outletDetailTextClass}>
+                    Tower 88 Punggol Way, #12-111/112, Singapore 829913
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
+                  <span className={outletDetailTextClass}>
+                    pc@ampilates.sg
+                  </span>
+                </div>
               </div>
 
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">Punggol Coast Mall: (65) 8333-5316</span>
-              </div>
-
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">pc@ampilates.sg</span>
-              </div>
-
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">
-                  Connexis: (65) 9093-3900
-                </span>
-              </div>
-
-              <div className="flex items-center space-x-3 md:space-x-4">
-                <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
-                <span className="text-base md:text-lg lg:text-xl text-[#232323]">
-                  Connexis: fp@ampilates.sg
-                </span>
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
+                  <span className={outletDetailTextClass}>
+                    Connexis: (65) 9093-3900
+                  </span>
+                </div>
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
+                  <span className={outletDetailTextClass}>
+                    1 Fusionopolis Way, #B1-07, Connexis, Singapore 138632
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <Mail className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0" />
+                  <span className={outletDetailTextClass}>
+                    fp@ampilates.sg
+                  </span>
+                </div>
               </div>
             </div>
           </div>

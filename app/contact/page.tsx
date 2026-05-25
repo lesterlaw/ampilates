@@ -10,7 +10,7 @@ export default function Contact() {
     <>
       {/* Contact Us Hero Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-8 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-16 lg:gap-y-8 items-start">
           <div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#80978b] mb-6 md:mb-8">Contact Us</h1>
             <p className="text-lg md:text-xl text-[#656565] mb-6 md:mb-8 leading-relaxed">
@@ -18,14 +18,16 @@ export default function Contact() {
               <br />
               Let us know how we can assist you—our welcoming and inclusive environment is designed to help everyone feel comfortable and empowered to reach their goals.
             </p>
-            
-            {/* Contact Information */}
-            <div className="space-y-8 md:space-y-10">
+          </div>
+          <div className="hidden lg:block" aria-hidden="true" />
+
+          {/* Contact Information */}
+          <div className="space-y-8 md:space-y-10">
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-start space-x-3 md:space-x-4">
                   <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
                   <span className={outletDetailTextClass}>
-                    Jurong CPF: (65) 9693-4753
+                    <strong>Jurong CPF</strong>: (65) 9693-4753
                   </span>
                 </div>
                 <div className="flex items-start space-x-3 md:space-x-4">
@@ -47,7 +49,7 @@ export default function Contact() {
                 <div className="flex items-start space-x-3 md:space-x-4">
                   <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
                   <span className={outletDetailTextClass}>
-                    Punggol Coast Mall: (65) 8333-5316
+                    <strong>Punggol Coast Mall</strong>: (65) 8333-5316
                   </span>
                 </div>
                 <div className="flex items-start space-x-3 md:space-x-4">
@@ -68,7 +70,7 @@ export default function Contact() {
                 <div className="flex items-start space-x-3 md:space-x-4">
                   <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
                   <span className={outletDetailTextClass}>
-                    Connexis: (65) 9093-3900
+                    <strong>Connexis</strong>: (65) 9093-3900
                   </span>
                 </div>
                 <div className="flex items-start space-x-3 md:space-x-4">
@@ -85,8 +87,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
-          
+
           <div className="relative md:rounded-[30px] rounded-4xl overflow-hidden h-[400px] md:h-[500px]">
             <Image
               src="/images/contact-us-image.jpg"

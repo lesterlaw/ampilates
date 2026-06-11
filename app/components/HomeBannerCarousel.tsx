@@ -31,6 +31,10 @@ const carouselImages: CarouselImage[] = [
     src: "/images/Carousell (PC).jpg",
     alt: "Pilates Class at Punggol Coast",
   },
+  {
+    src: "/images/homestudio.jpeg",
+    alt: "am Pilates Studio",
+  },
 ];
 
 const AUTO_SCROLL_INTERVAL = 6000; // 6 seconds

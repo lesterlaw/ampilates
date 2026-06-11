@@ -116,10 +116,12 @@ export default function Home() {
             </h3>
             <div className="text-sm md:text-base text-[#656565] leading-relaxed">
               <p>
-                Join us at our serene studio in the West side of Singapore at
-                Jurong CPF, or experience our brand new space at Punggol Coast
-                Mall in the North-East — thoughtfully designed to bring balance
-                and vitality closer to you.​
+                Join us at our serene studio in the West at Jurong CPF,
+                experience our vibrant community at Punggol Coast Mall in the
+                North-East, or discover our newest space at One-North
+                Fusionopolis (Connexis) — thoughtfully designed to bring
+                balance, movement, and vitality closer to you, wherever you are
+                in Singapore.
               </p>
             </div>
           </div>
@@ -157,7 +159,7 @@ export default function Home() {
       <FadeInOnView>
         <ClassesCarousel
           heading="Our Classes"
-          intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​"
+          intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class — just one session to get you comfortable and confident before joining our regular classes!​"
         />
       </FadeInOnView>
 

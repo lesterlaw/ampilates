@@ -16,7 +16,7 @@ export default function Contact() {
             <p className="text-lg md:text-xl text-[#656565] mb-6 md:mb-8 leading-relaxed">
               <strong>We're here to support you on your fitness journey at am Pilates.</strong>
               <br />
-              Let us know how we can assist you—our welcoming and inclusive environment is designed to help everyone feel comfortable and empowered to reach their goals.
+              Let us know how we can assist you — our welcoming and inclusive environment is designed to help everyone feel comfortable and empowered to reach their goals.
             </p>
           </div>
           <div className="hidden lg:block" aria-hidden="true" />
@@ -70,13 +70,13 @@ export default function Contact() {
                 <div className="flex items-start space-x-3 md:space-x-4">
                   <Phone className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
                   <span className={outletDetailTextClass}>
-                    <strong>Connexis</strong>: (65) 9093-3900
+                    <strong>Fusionopolis (Connexis)</strong>: (65) 9093-3900
                   </span>
                 </div>
                 <div className="flex items-start space-x-3 md:space-x-4">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-[#232323] flex-shrink-0 mt-0.5" />
                   <span className={outletDetailTextClass}>
-                    1 Fusionopolis Way, #B1-07, Connexis, Singapore 138632
+                    1 Fusionopolis Way, #B1-08, Connexis, Singapore 138632
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 md:space-x-4">

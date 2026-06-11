@@ -51,15 +51,15 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Can I transfer my membership account to another holder?",
-        answer: "No, all packages are intended for the recipient who purchased them and are nontransferable."
+        answer: "No, all packages are intended for the recipient who purchased them and are non-transferable."
       },
       {
         question: "When does my class/package become active? Does it have an expiry date?",
-        answer: "The first class must be booked within 1 month from the date of purchase. Otherwise, remaining sessions will be non-refundable.\n\nSubsequent classes have to be used within the following time frame:\nPurchase of 4 passes: valid for 1 month\nPurchase of 8 Passes: valid for 2 months\nPurchase of 12 Passes: valid for 3 months\nPurchase of 24 Passes: valid for 6 months\nPurchase of 48 Passes: valid for 12 months"
+        answer: "The first class must be booked within 1 month from the date of purchase. Otherwise, remaining sessions will be non-refundable.\n\nSubsequent classes have to be used within the following time frame:\nPurchase of 4 Passes: valid for 1 month\nPurchase of 8 Passes: valid for 2 months\nPurchase of 12 Passes: valid for 3 months\nPurchase of 24 Passes: valid for 6 months\nPurchase of 48 Passes: valid for 12 months"
       },
       {
         question: "Can I extend the expiration date of my classes or package?",
-        answer: "Please contact our studio for extension options. Extensions are granted on a case-bycase basis and may require an additional fee."
+        answer: "Please contact our studio for extension options. Extensions are granted on a case-by-case basis and may require an additional fee."
       }
     ]
   },
@@ -97,11 +97,11 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "Do I have to attend an introductory class before Firm Foundation, Essential Strength and Active Mobility classes?",
-        answer: "Yes, you will have to attend at least 1 introductory class before signing up for the other classes, regardless if you have attended classes outside of am Pilates."
+        answer: "Yes, you will have to attend at least 1 Introductory class before signing up for the other classes, regardless if you have attended classes outside of am Pilates."
       },
       {
         question: "What is the maximum class size?",
-        answer: "13 pax excluding instructor!"
+        answer: "13 for Jurong CPF and Punggol Coast Mall, and 11 for Fusionopolis (Connexis)"
       }
     ]
   }

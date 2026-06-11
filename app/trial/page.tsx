@@ -41,7 +41,7 @@ const TrialClassPage = () => {
                 Duration: 50 minutes
               </p>
               <p className="text-lg text-foreground">
-                What to Bring: Bring Grip Socks
+                What to Bring: Grip Socks
               </p>
               <button 
                 onClick={() => setShowTnC(true)}
@@ -120,7 +120,7 @@ const TrialClassPage = () => {
                 Guidance
               </h3>
               <p className="text-xl text-secondary leading-relaxed">
-                Guidance from certified, supportive instructor
+                Guidance from certified, supportive teachers
               </p>
             </div>
           </div>

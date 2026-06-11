@@ -95,17 +95,17 @@ export default function About() {
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <Image
                 src="/images/expertinstructor.png"
-                alt="Expert Instruction"
+                alt="Expert Instructor"
                 width={64}
                 height={64}
                 className="w-16 h-16"
               />
             </div>
             <h3 className="font-sans text-lg md:text-xl font-bold text-[#656565] mb-3 md:mb-4">
-              Expert Instruction
+              Expert Instructor
             </h3>
             <p className="text-sm md:text-base text-[#656565] leading-relaxed">
-              Our certified instructors bring years of experience and passion to
+              Our certified teachers bring years of experience and passion to
               every class, ensuring you receive personalised attention and
               proper guidance.
             </p>
@@ -222,10 +222,11 @@ export default function About() {
           Our Locations
         </h2>
         <p className="text-base md:text-lg text-[#656565] my-6 md:my-8">
-          Join us at our serene studio in the West side of Singapore at Jurong
-          CPF, or experience our brand new space at Punggol Coast Mall in the
-          North-East - thoughtfully designed to bring balance and vitality
-          closer to you.
+          Join us at our serene studio in the West at Jurong CPF, experience our
+          vibrant community at Punggol Coast Mall in the North-East, or discover
+          our newest space at One-North Fusionopolis (Connexis) — thoughtfully
+          designed to bring balance, movement, and vitality closer to you,
+          wherever you are in Singapore.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -291,7 +292,7 @@ export default function About() {
               className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
             <h3 className="font-sans text-xl md:text-2xl font-bold text-[#232323] mb-2">
-              Tower 88 Punggol Way
+              Punggol Coast Mall
             </h3>
             <a
               href="https://www.google.com/maps/place/am+Pilates+Punggol+Coast+Mall/@1.4155876,103.9078964,17z/data=!3m1!4b1!4m6!3m5!1s0x31da1545e1425bd1:0x1253a705f59dbf28!8m2!3d1.4155822!4d103.9104767!16s%2Fg%2F11yds3c6xr?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
@@ -337,14 +338,14 @@ export default function About() {
 
           <div className="">
             <Image
-              src={"/images/ampilates-circle.png"}
-              alt="Connexis Studio"
+              src={"/images/FP.jpeg"}
+              alt="Fusionopolis Studio"
               width={500}
               height={300}
               className="w-full aspect-[4/3] object-cover rounded-2xl md:rounded-4xl mb-4 md:mb-6"
             />
             <h3 className="font-sans text-xl md:text-2xl font-bold text-[#232323] mb-2">
-              Connexis <span className="text-base md:text-lg font-normal">(Coming Soon)</span>
+              Fusionopolis (Connexis) - Newly Opened
             </h3>
             <p className="text-sm md:text-base text-[#656565] mb-4">
               1 Fusionopolis Way, #B1-08 (One-North MRT, Exit C)
@@ -447,7 +448,7 @@ export default function About() {
       <FadeInOnView>
         <ClassesCarousel
           heading="Our Classes"
-          intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​"
+          intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class — just one session to get you comfortable and confident before joining our regular classes!​"
         />
       </FadeInOnView>
 

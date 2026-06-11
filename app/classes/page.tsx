@@ -172,7 +172,7 @@ export default function Classes() {
             Our Classes
           </h2>
           <p className="text-lg md:text-xl text-[#656565] leading-relaxed max-w-5xl mx-auto px-4 md:px-0">
-            New to am Pilates? Your journey begins with a fun and friendly Introductory Class—just one session to get you comfortable and confident before joining our regular classes!​
+            New to am Pilates? Your journey begins with a fun and friendly Introductory Class — just one session to get you comfortable and confident before joining our regular classes!​
           </p>
         </div>
 

@@ -43,7 +43,7 @@ const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
         imageAlt: "Essential Strength Flexibility",
         difficulty: 2,
         description:
-          "For the Pilates Girlies Starting Their Strength Journey. Ready to feel stronger and more stable? Learn how to activate your core, shoulder, and hip stabilisers—key muscles that support balance, posture, and control in every movement.",
+          "For the Pilates Girlies Starting Their Strength Journey. Ready to feel stronger and more stable? Learn how to activate your core, shoulder, and hip stabilisers — key muscles that support balance, posture, and control in every movement.",
       },
       {
         title: "Active Mobility",

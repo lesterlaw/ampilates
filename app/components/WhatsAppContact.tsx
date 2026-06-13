@@ -233,14 +233,14 @@ export default function WhatsAppContact() {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-bold text-[#232323] mb-2 flex items-center gap-2">
-                          📍 Tower 88 Punggol Way
+                          📍 Punggol Coast Mall
                           <span className="text-green-600 text-sm font-normal">
                             Book now
                           </span>
                         </h3>
                         <p className="text-sm text-[#656565] mb-2">
-                          #12-111, Singapore 829913<br />
-                          <span className="text-xs">(Take the lift from lobby D or F)</span>
+                          Tower 88 Punggol Way (via Lobby D)<br />
+                          #12-111, Singapore 829913
                         </p>
                         <div className="flex items-center gap-2 text-green-600 text-sm font-medium">
                           <Phone size={14} />
@@ -271,7 +271,7 @@ export default function WhatsAppContact() {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-bold text-[#232323] mb-2 flex items-center gap-2">
-                          📍 Connexis
+                          📍 Fusionopolis (Connexis)
                           <span className="text-green-600 text-sm font-normal">
                             Book now
                           </span>

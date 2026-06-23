@@ -55,7 +55,7 @@ const faqData: FAQCategory[] = [
       },
       {
         question: "When does my class/package become active? Does it have an expiry date?",
-        answer: "The first class must be booked within 1 month from the date of purchase. Otherwise, remaining sessions will be non-refundable.\n\nSubsequent classes have to be used within the following time frame:\nPurchase of 4 Passes: valid for 1 month\nPurchase of 8 Passes: valid for 2 months\nPurchase of 12 Passes: valid for 3 months\nPurchase of 24 Passes: valid for 6 months\nPurchase of 48 Passes: valid for 12 months"
+        answer: "The first class must be booked within 1 month from the date of purchase.\n\nSubsequent classes have to be used within the following time frame:\nPurchase of 4 Passes: valid for 1 month\nPurchase of 8 Passes: valid for 2 months\nPurchase of 12 Passes: valid for 3 months\nPurchase of 24 Passes: valid for 6 months\nPurchase of 48 Passes: valid for 12 months"
       },
       {
         question: "Can I extend the expiration date of my classes or package?",

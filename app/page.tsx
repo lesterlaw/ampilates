@@ -116,12 +116,9 @@ export default function Home() {
             </h3>
             <div className="text-sm md:text-base text-[#656565] leading-relaxed">
               <p>
-                Join us at our serene studio in the West at Jurong CPF,
-                experience our vibrant community at Punggol Coast Mall in the
-                North-East, or discover our newest space at One-North
-                Fusionopolis (Connexis) — thoughtfully designed to bring
-                balance, movement, and vitality closer to you, wherever you are
-                in Singapore.
+                With studios at Jurong CPF, Punggol Coast Mall, and
+                Fusionopolis (Connexis), finding a class that fits your routine
+                has never been easier.
               </p>
             </div>
           </div>

@@ -42,13 +42,14 @@ export default async function Promotions() {
           </p>
         </div>
 
-        <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden mb-8 md:mb-16">
+        <div className="relative rounded-[30px] md:rounded-[60px] overflow-hidden mb-8 md:mb-16 aspect-[3/2]">
           <Image
-            src={"/images/promotions-header.png"}
+            src={"/images/promobanner.jpg"}
             alt="am Pilates Promotions"
-            width={1200}
-            height={800}
-            className="w-full h-auto object-contain"
+            fill
+            className="object-cover object-[center_15%]"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            priority
           />
         </div>
       </section>

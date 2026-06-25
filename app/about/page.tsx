@@ -65,7 +65,7 @@ export default function About() {
             </div>
           </div>
           <Image
-            src="/images/welcometopilates.png"
+            src="/images/aboutabout.jpg"
             alt="About am Pilates"
             width={400}
             height={400}
@@ -222,11 +222,8 @@ export default function About() {
           Our Locations
         </h2>
         <p className="text-base md:text-lg text-[#656565] my-6 md:my-8">
-          Join us at our serene studio in the West at Jurong CPF, experience our
-          vibrant community at Punggol Coast Mall in the North-East, or discover
-          our newest space at One-North Fusionopolis (Connexis) — thoughtfully
-          designed to bring balance, movement, and vitality closer to you,
-          wherever you are in Singapore.
+          Join us at Jurong CPF, Punggol Coast Mall, or Fusionopolis (Connexis)
+          — conveniently located across Singapore.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -348,7 +345,7 @@ export default function About() {
               Fusionopolis (Connexis) - Newly Opened
             </h3>
             <p className="text-sm md:text-base text-[#656565] mb-4">
-              1 Fusionopolis Way, #B1-08 (One-North MRT, Exit C)
+              1 Fusionopolis Way, #B1-08 (one-north MRT, Exit C)
               <br />
               Singapore 138632
             </p>

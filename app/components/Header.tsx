@@ -189,8 +189,8 @@ const Header = () => {
           <Link href="/promotions" className={getNavItemClass("/promotions")}>
             Promotions
           </Link>
-          <Link href="/partner-perks" className={getNavItemClass("/partner-perks")}>
-            Partner Perks
+          <Link href="/member-perks" className={getNavItemClass("/member-perks")}>
+            Member Perks
           </Link>
           <Link href="/contact" className={getNavItemClass("/contact")}>
             Contact Us
@@ -371,11 +371,11 @@ const Header = () => {
             Promotions
           </Link>
           <Link
-            href="/partner-perks"
-            className={getMobileNavItemClass("/partner-perks")}
+            href="/member-perks"
+            className={getMobileNavItemClass("/member-perks")}
             onClick={closeMenu}
           >
-            Partner Perks
+            Member Perks
           </Link>
           <Link
             href="/contact"

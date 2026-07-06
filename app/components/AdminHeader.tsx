@@ -7,7 +7,7 @@ interface AdminHeaderProps {
   adminEmail: string;
   title: string;
   description: string;
-  currentSection: "promotions" | "team";
+  currentSection: "promotions" | "team" | "classes";
 }
 
 export default function AdminHeader({
@@ -47,6 +47,17 @@ export default function AdminHeader({
                 )}
               >
                 Team
+              </Link>
+              <Link
+                href="/admin/classes"
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  currentSection === "classes"
+                    ? "bg-[#80978b] text-white"
+                    : "bg-[#f3f4ef] text-[#232323] hover:bg-[#e4e8e2]"
+                )}
+              >
+                Classes
               </Link>
             </div>
           </div>

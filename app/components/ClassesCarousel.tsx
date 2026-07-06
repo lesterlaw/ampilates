@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import DifficultyIcon from "./DifficultyIcon";
 import { motion, useReducedMotion } from "framer-motion";
@@ -17,45 +17,10 @@ type ClassCard = {
 type ClassesCarouselProps = {
   heading?: string;
   intro?: string;
+  classesData: ClassCard[];
 };
 
-const ClassesCarousel = ({ heading, intro }: ClassesCarouselProps) => {
-  const classesData: ClassCard[] = useMemo(
-    () => [
-      {
-        title: "Introductory Class",
-        imageSrc: "/images/introduction-class.jpg",
-        imageAlt: "Introductory Class",
-        description:
-          "Never Tried Reformer Pilates before? This Introductory Class is the perfect first step. You'll get to know the equipment, learn key safety tips, and understand the terms and cues used in class. Plus, we'll guide you through body alignment basics to help you move with confidence and ease.",
-      },
-      {
-        title: "Firm Foundation",
-        imageSrc: "/NewFirm%20.png",
-        imageAlt: "Firm Foundation",
-        difficulty: 1,
-        description:
-          "Your Next Step to Mastering Pilates! This dynamic class builds on the Introductory session, helping you sharpen technique, boost mobility, and move with greater control and confidence.",
-      },
-      {
-        title: "Essential Strength",
-        imageSrc: "/images/essentialstrengthcropped.png",
-        imageAlt: "Essential Strength Flexibility",
-        difficulty: 2,
-        description:
-          "For the Pilates Girlies Starting Their Strength Journey. Ready to feel stronger and more stable? Learn how to activate your core, shoulder, and hip stabilisers — key muscles that support balance, posture, and control in every movement.",
-      },
-      {
-        title: "Active Mobility",
-        imageSrc: "/images/activemobilitycropped.png",
-        imageAlt: "Active Mobility",
-        difficulty: 2,
-        description:
-          "Flexibility & Mobility Goals? Let's Get Moving! Improve flexibility, boost mobility, and relieve stress through mindful movement and targeted stretches.",
-      },
-    ],
-    []
-  );
+const ClassesCarousel = ({ heading, intro, classesData }: ClassesCarouselProps) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);

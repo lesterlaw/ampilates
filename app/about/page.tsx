@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ClassesCarousel from "../components/ClassesCarousel";
+import ClassesCarouselSection from "../components/ClassesCarouselSection";
 import FadeInOnView from "../components/FadeInOnView";
 import BookNowButton from "../components/BookNowButton";
 import GetTrialNowButton from "../components/GetTrialNowButton";
@@ -443,7 +443,7 @@ export default function About() {
 
       {/* Classes Section */}
       <FadeInOnView>
-        <ClassesCarousel
+        <ClassesCarouselSection
           heading="Our Classes"
           intro="New to am Pilates? Your journey begins with a fun and friendly Introductory Class — just one session to get you comfortable and confident before joining our regular classes!​"
         />

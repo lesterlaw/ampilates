@@ -98,7 +98,7 @@ const HomeBannerCarousel = () => {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover"
+                className="object-cover object-[center_30%]"
                 priority={index === 0}
               />
             </div>

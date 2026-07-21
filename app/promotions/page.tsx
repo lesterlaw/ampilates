@@ -47,7 +47,7 @@ export default async function Promotions() {
             src={"/images/promobanner.jpg"}
             alt="am Pilates Promotions"
             fill
-            className="object-cover object-[center_15%]"
+            className="object-cover object-[center_20%]"
             sizes="(max-width: 1280px) 100vw, 1280px"
             priority
           />

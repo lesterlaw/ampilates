@@ -9,8 +9,9 @@ interface DownloadAppModalProps {
 }
 
 export default function DownloadAppModal({ isOpen, onClose }: DownloadAppModalProps) {
-  const googlePlayLink = "https://play.google.com/store/apps/details?id=com.mindbodyonline.connect";
-  const appStoreLink = "https://apps.apple.com/sg/app/mindbody-fitness-wellness/id689501356";
+  const googlePlayLink =
+    "https://play.google.com/store/apps/details?id=com.fitnessmobileapps.ampilates38918&pcampaignid=web_share";
+  const appStoreLink = "https://apps.apple.com/sg/app/am-pilates-sg/id6503343621";
 
   const modalVariants = {
     hidden: {
@@ -102,7 +103,7 @@ export default function DownloadAppModal({ isOpen, onClose }: DownloadAppModalPr
                   Download Our App
                 </h2>
                 <p className="text-white/90">
-                  Get the Mindbody app to book classes and manage your membership
+                  Get the AM Pilates app to book classes and manage your membership
                 </p>
               </div>
             </div>

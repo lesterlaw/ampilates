@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const amoreFamily = [
   { name: "Amore Fitness", tagline: "Gym & Group Classes", href: "https://amorefitness.com/", external: true },
-  { name: "Amore Define", tagline: "Spa & wellness", href: "https://amorefitness.com/", external: true },
+  { name: "Amore Define", tagline: "Spa & wellness", href: "https://amorefitness.com/wellness/", external: true },
   { name: "am Pilates", tagline: "Reformer Pilates", href: "/", external: false },
   { name: "amber", tagline: "Functional training", href: "https://www.amberfts.sg/", external: true },
 ];

@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const amoreFamily = [
-  { name: "Amore Fitness", tagline: "Gym & Group Classes", href: "https://amorefitness.com/" },
-  { name: "Amore Define", tagline: "Spa & Wellness", href: "https://amorefitness.com/" },
-  { name: "amber", tagline: "Women's Strength Training", href: "https://www.amberfts.sg/" },
+  { name: "Amore Fitness", tagline: "Gym & Group Classes", href: "https://amorefitness.com/", external: true },
+  { name: "Amore Define", tagline: "Spa & wellness", href: "https://amorefitness.com/", external: true },
+  { name: "am Pilates", tagline: "Reformer Pilates", href: "/", external: false },
+  { name: "amber", tagline: "Functional training", href: "https://www.amberfts.sg/", external: true },
 ];
 
 const Footer = () => {
@@ -83,29 +84,39 @@ const Footer = () => {
         </div>
       </section>
 
-      {/* Part of Amore Family */}
+      {/* Part of the Amore family */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 pb-8 md:pb-12">
         <div className="border-t border-gray-300 pt-8 md:pt-12 text-center">
-          <h3 className="text-xl md:text-2xl font-semibold text-[#232323] mb-6 md:mb-8">
-            Part of Amore Family
+          <h3 className="text-xl md:text-2xl font-semibold text-[#232323] mb-2 md:mb-3">
+            Part of the Amore family
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-            {amoreFamily.map((brand) => (
-              <a
-                key={brand.name}
-                href={brand.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-2xl border border-gray-200 px-4 py-6 hover:border-[#80978b] transition-colors"
-              >
-                <span className="block text-lg md:text-xl font-semibold text-[#232323] group-hover:text-[#80978b] transition-colors">
-                  {brand.name}
-                </span>
-                <span className="block text-sm md:text-base text-[#656565] mt-1">
-                  {brand.tagline}
-                </span>
-              </a>
-            ))}
+          <p className="text-sm md:text-base text-[#656565] mb-6 md:mb-10">
+            Discover more ways to move and feel good.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0">
+            {amoreFamily.map((brand) => {
+              const content = (
+                <>
+                  <span className="block text-lg md:text-2xl text-[#232323] group-hover:text-[#80978b] transition-colors">
+                    {brand.name}
+                  </span>
+                  <span className="block text-sm md:text-base text-[#656565] mt-1">
+                    {brand.tagline}
+                  </span>
+                </>
+              );
+              const cls =
+                "group block px-4 py-2 md:border-l md:border-gray-300 md:first:border-l-0";
+              return brand.external ? (
+                <a key={brand.name} href={brand.href} target="_blank" rel="noopener noreferrer" className={cls}>
+                  {content}
+                </a>
+              ) : (
+                <Link key={brand.name} href={brand.href} className={cls}>
+                  {content}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

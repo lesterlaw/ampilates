@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
       host: "smtp.gmail.com",
       auth: {
         user: "noreply.sleek@gmail.com",
-        pass: "jbumtdmvixlkwiyt",
+        pass: "eadqzaxuupbannar",
       },
       secure: true,
     });

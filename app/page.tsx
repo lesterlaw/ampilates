@@ -31,11 +31,11 @@ export default function Home() {
             We are am Pilates
           </h2>
           <p className="text-lg md:text-xl text-[#656565] max-w-5xl mx-auto leading-relaxed px-4 md:px-0">
-            Discover the beauty of Pilates at am Pilates. Explore our diverse
-            classes, designed to <strong>empower</strong> and{" "}
-            <strong>strengthen</strong> your body. Feel the positive energy flow
-            as you engage in movement tailored to your needs. Let’s embark on
-            this journey together, embracing the power of Pilates.
+            Discover am Pilates, a reformer Pilates concept by Amore, created
+            for women to build strength, balance and confidence through
+            mindful movement. Explore our diverse classes tailored to your
+            needs, and feel supported as you move, grow and connect with a
+            community of like-minded women.
           </p>
         </div>
 

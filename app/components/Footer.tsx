@@ -3,6 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const amoreFamily = [
+  { name: "Amore Fitness", tagline: "Gym & Group Classes", href: "https://amorefitness.com/" },
+  { name: "Amore Define", tagline: "Spa & Wellness", href: "https://amorefitness.com/" },
+  { name: "amber", tagline: "Women's Strength Training", href: "https://www.amberfts.sg/" },
+];
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -73,6 +79,33 @@ const Footer = () => {
               By submitting your email address, you agree to receive emails from
               am Pilates. You may unsubscribe anytime.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Part of Amore Family */}
+      <section className="max-w-7xl mx-auto px-4 md:px-8 pb-8 md:pb-12">
+        <div className="border-t border-gray-300 pt-8 md:pt-12 text-center">
+          <h3 className="text-xl md:text-2xl font-semibold text-[#232323] mb-6 md:mb-8">
+            Part of Amore Family
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+            {amoreFamily.map((brand) => (
+              <a
+                key={brand.name}
+                href={brand.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-gray-200 px-4 py-6 hover:border-[#80978b] transition-colors"
+              >
+                <span className="block text-lg md:text-xl font-semibold text-[#232323] group-hover:text-[#80978b] transition-colors">
+                  {brand.name}
+                </span>
+                <span className="block text-sm md:text-base text-[#656565] mt-1">
+                  {brand.tagline}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
